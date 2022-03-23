@@ -17,11 +17,12 @@
                 Crystals & Gemstones
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Trumbled gemstones</a>
-                <a href="" class="dropdown-item">Raw gemstones</a>
-                <a href="" class="dropdown-item">Clusters</a>
-                <a href="" class="dropdown-item">Towers</a>
-                <a href="" class="dropdown-item">Big Crystals</a>
+                <a href="{% url 'products' %}?category=trumbled" class="dropdown-item">Trumbled gemstones</a>
+                <a href="{% url 'products' %}?category=raw" class="dropdown-item">Raw gemstones</a>
+                <a href="{% url 'products' %}?category=clusters" class="dropdown-item">Clusters</a>
+                <a href="{% url 'products' %}?category=towers" class="dropdown-item">Towers</a>
+                <a href="{% url 'products' %}?category=bigcrystals" class="dropdown-item">Big Crystals</a>
+                <a href="{% url 'products' %}?category=trumbled,raw,clusters,towers,bigcrystals" class="dropdown-item">All Crystals and Stones</a>
             </div>
         </li>
 
@@ -30,11 +31,11 @@
                 Cards and Incenses 
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Tarot Cards</a>
-                <a href="" class="dropdown-item">books</a>
-                <a href="" class="dropdown-item">Incenses Burners</a>
-                <a href="" class="dropdown-item">White Sage</a>
-                <a href="" class="dropdown-item">All Cards and Incenses</a>
+                <a href="{% url 'products' %}?category=tarotcards" class="dropdown-item">Tarot Cards</a>
+                <a href="{% url 'products' %}?category=books" class="dropdown-item">Books</a>
+                <a href="{% url 'products' %}?category=incensesburners" class="dropdown-item">Incenses Burners</a>
+                <a href="{% url 'products' %}?category=whitesages" class="dropdown-item">White Sage</a>
+                <a href="{% url 'products' %}?category=tarotcards,books,incensesburners,whitesages" class="dropdown-item">All Cards, Books and Incenses</a>
             </div>
         </li>
 
