@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 
     'home',
     'products',
+    'shoppingcart',
 ]
 
 SITE_ID = 1
