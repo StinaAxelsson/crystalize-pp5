@@ -47,6 +47,8 @@ INSTALLED_APPS = [
     'allauth.account',
     'allauth.socialaccount',
 
+    'crispy_forms'
+
     'home',
     'products',
     'shoppingcart',
@@ -67,6 +69,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'crystalized.urls'
 
+CRISPY_TEMPALTE_PACK = 'bootstrap4'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -83,6 +87,10 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'shoppingcart.context.cart_contents',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_fields',
+            ]
         },
     },
 ]
