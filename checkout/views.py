@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib import messages
 from .forms import OrderForm
+from shoppingcart.context import cart_contents
 
 
 def checkout(request):
