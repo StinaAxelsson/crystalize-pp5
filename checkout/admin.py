@@ -10,8 +10,8 @@ class OrderLineItemAdminInline(admin.TabularInline):
 
 class OrderAdmin(admin.ModelAdmin):
     """ Admin view for Order """
-    readonly_fields = ('order_number', 'date', 
-                       'delivery_cost', 'order_total', 
+    readonly_fields = ('order_number', 'date',
+                       'delivery_cost', 'order_total',
                        'grand_total',)
 
     fields = ('order_number', 'date', 'full_name',
