@@ -49,8 +49,8 @@
                                 <p class="my-0">${{ item.product.price }}</p>
                             </td>
                             <td class="py-3 w-25">
-                                <a class="update-link text-info">Add to Cart</a>
-                                <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}">Remove</a>
+                                <a class="update-link text-info" href="{% url 'product_detail' item.product.id %}">Back to Product</a>
+                                <a class="remove-item text-danger float-right" href="{% url 'delete_in_wishlist' item.product.id %}">Remove</a>
                             </td>
                         </tr>
                         {% endfor %}
@@ -68,20 +68,9 @@
             <span class="icon">
                 <i class="fas fa-chevron-left"></i>
             </span>
-            <span>Delicatessen</span>
-        </a>
-        <a href="{% url 'profile' %}" class="btn btn-cream my-2">
-            <span>My Profile</span>
-            <span class="icon">
-                <i class="fas fa-chevron-right"></i>
-            </span>
+            <span>Keep looking</span>
         </a>
     </div>
 </div>
 </section>
-<div class="btt-button border-green green bg-cream">
-<a class="btt-link d-flex h-100">
-    <i class="fas fa-arrow-up mx-auto my-auto"></i>
-</a>
-</div>
 {% endblock %}

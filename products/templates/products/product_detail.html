@@ -31,7 +31,7 @@
                     <p class="mb-1">
                         {% if wishlist %}
                             <span class="d-none d-lg-inline-block red">Remove from Wishlist: </span>
-                            <a href="">
+                            <a href="{% url 'delete_in_wishlist' product.id %}">
                                 <i class="hover-heart-green fas fa-heart fa-lg ml-1 mt-3 red"></i>
                             </a>
                         {% else %}

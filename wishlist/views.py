@@ -28,3 +28,12 @@ def save_to_wishlist(request, product_id):
     messages.success(request, f'{product.name} has successfully saved to your wishlist')
 
     return redirect(reverse('product_detail', args=[product.id]))
+
+
+def delete_in_wishlist(request, product_id):
+    """ Delete a product from wishlist """
+
+    product = get_object_or_404(Product, pk=product_id)
+    WishList.objects.filter(product=product).delete()
+
+    return redirect(reverse('product_detail', args=[product.id]))
