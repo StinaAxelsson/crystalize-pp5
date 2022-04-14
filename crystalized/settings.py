@@ -27,7 +27,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = 'DEVELOPMENT' in os.environ
+DEBUG = True  # 'DEVELOPMENT' in os.environ
 
 ALLOWED_HOSTS = ['crystalizedshop.herokuapp.com', 'localhost']
 
@@ -52,8 +52,9 @@ INSTALLED_APPS = [
     'shoppingcart',
     'checkout',
     'profiles',
+    'wishlist',
 
-    # Other 
+    # Other
     'crispy_forms',
     'storages',
 ]
