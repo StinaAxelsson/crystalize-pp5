@@ -20,6 +20,12 @@ body {
     height: calc(100vh - 164px);
 }
 
+.category-images{
+    background: url('/media/images/rose-raw.jpg') no-repeat center center;
+    background-size: cover;
+    height: 200px;
+    width: 200px;
+}
 /*-------------------------------------------------Nav headers*/
 
 .bg-banner{

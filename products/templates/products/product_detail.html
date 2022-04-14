@@ -30,14 +30,14 @@
                     <p class="mb-0">{{ product.name }}</p>
                     <p class="mb-1">
                         {% if wishlist %}
-                            <span class="d-none d-lg-inline-block red">Remove from Wishlist: </span>
+                            <span class="d-none d-lg-inline-block">Delete from Wishlist: </span>
                             <a href="{% url 'delete_in_wishlist' product.id %}">
-                                <i class="hover-heart-green fas fa-heart fa-lg ml-1 mt-3 red"></i>
+                                <i class=" fas fa-heart fa-lg ml-1 mt-3"></i>
                             </a>
                         {% else %}
-                            <span class="d-none d-lg-inline-block green">Save to Wishlist: </span>
-                            <a class="wishlist_btn hvr-grow" href="{% url 'save_to_wishlist' product.id %}">
-                                <i class="hover-heart-red far fa-heart fa-lg ml-1 mt-3 green"></i>
+                            <span class="d-none d-lg-inline-block">Save to Wishlist: </span>
+                            <a class="wishlist_btn hvr-grow" href="{% if user.is_authenticated %}{% url 'save_to_wishlist' product.id %}{% else %}{% url 'account_login' %}{% endif %}">
+                                <i class="far fa-heart fa-lg ml-1 mt-3"></i>
                             </a>
                         {% endif %}
                     </p>
