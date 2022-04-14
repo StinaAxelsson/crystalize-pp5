@@ -28,6 +28,19 @@
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5">
                     <p class="mb-0">{{ product.name }}</p>
+                    <p class="mb-1">
+                        {% if wishlist %}
+                            <span class="d-none d-lg-inline-block red">Remove from Wishlist: </span>
+                            <a href="">
+                                <i class="hover-heart-green fas fa-heart fa-lg ml-1 mt-3 red"></i>
+                            </a>
+                        {% else %}
+                            <span class="d-none d-lg-inline-block green">Save to Wishlist: </span>
+                            <a class="wishlist_btn hvr-grow" href="{% url 'save_to_wishlist' product.id %}">
+                                <i class="hover-heart-red far fa-heart fa-lg ml-1 mt-3 green"></i>
+                            </a>
+                        {% endif %}
+                    </p>
                     <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
                     {% if product.category %}
                     <p class="small mt-1 mb-0">

@@ -21,4 +21,67 @@
     </div>
 </div>
 
+<div class="row">
+    <div class="col-10 offset-1">
+        {% if wishlist %}
+            <div class="table-responsive rounded">
+                <table class="table table-sm table-borderless">
+                    <thead class="green">
+                        <tr>
+                            <th scope="col">Product Info</th>
+                            <th scope="col"></th>
+                            <th scope="col">Price</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        {% for item in wishlist %}
+                        <tr>
+                            <td class="p-3 w-25">
+                                <img class="img-fluid rounded" src="{{ item.product.image.url }}">
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                                <p class="p-2 mr-3"><small>{{ item.product.description }}</small></p>
+                            </td>
+                            <td class="py-3">
+                                <p class="my-0">${{ item.product.price }}</p>
+                            </td>
+                            <td class="py-3 w-25">
+                                <a class="update-link text-info">Add to Cart</a>
+                                <a class="remove-item text-danger float-right" id="remove_{{ item.item_id }}">Remove</a>
+                            </td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <p class="lead mb-5 green">You have no products in your Wishlist.</p>
+        {% endif %}
+    </div>
+</div>   
+<div class="row mt-2">
+    <div class="col text-center">
+        <a href="{% url 'products' %}" class="btn btn-green">
+            <span class="icon">
+                <i class="fas fa-chevron-left"></i>
+            </span>
+            <span>Delicatessen</span>
+        </a>
+        <a href="{% url 'profile' %}" class="btn btn-cream my-2">
+            <span>My Profile</span>
+            <span class="icon">
+                <i class="fas fa-chevron-right"></i>
+            </span>
+        </a>
+    </div>
+</div>
+</section>
+<div class="btt-button border-green green bg-cream">
+<a class="btt-link d-flex h-100">
+    <i class="fas fa-arrow-up mx-auto my-auto"></i>
+</a>
+</div>
 {% endblock %}
