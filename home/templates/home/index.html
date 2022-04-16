@@ -26,45 +26,64 @@ d-flex flex-column justify-content-center">
 </div>
 </div>
 </header>
-<section class="container-fluid px-5">
+<section class="container">
     <div class="row">
         <div class="col-12 text-center my-3">
             <h2 class="green">Categorys</h2>
         </div>
-        <div class="container">
-            <div class="row">
-              <div class="col-sm">
-                        <div class="category-images">
-                        <a href="{% url 'products' %}" class="btn btn-color mr-2 text-white">Shop now!</a>
-                    </div>
-              <div class="col-sm">
-                <div class="category-images">
-                    <a href="{% url 'products' %}" class="btn btn-color mr-2 text-white">Shop now!</a>
-                </div>
+    </div>
+    <div class="row flex">
+        <div class="col-lg-4 col-sm-6">
+            <div class="container-category">
+                <a href="{% url 'products' %}" >
+                <img class="zoom" src="{% static 'images/cat-cluster.jpg' %}" alt="Snow">
+                <div class="btn-category">Clusters</div>
+            </a>
               </div>
-              <div class="col-sm">
-                <div class="category-images">
-                    <a href="{% url 'products' %}" class="btn btn-color mr-2 text-white">Shop now!</a>
-                </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-3">
+            <div class="container-category">
+                <a href="{% url 'products' %}" >
+                    <img class="zoom" src="{% static 'images/cat-raw.jpg' %}" alt="Snow">
+                    <div class="btn-category">Raw gemstones</div>
+                </a>
               </div>
-            </div>
-            <div class="row">
-                <div class="col-sm">
-                    <div class="category-images">
-                        <a href="{% url 'products' %}" class="btn btn-color mr-2 text-white">Shop now!</a>
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <div class="category-images">
-                        <a href="{% url 'products' %}" class="btn btn-color mr-2 text-white">Shop now!</a>
-                    </div>
-                </div>
-                <div class="col-sm">
-                    <div class="category-images">
-                        <a href="{% url 'products' %}" class="btn btn-color mr-2 text-white">Shop now!</a>
-                    </div>
-                </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-3">
+            <div class="container-category">
+                <a href="{% url 'products' %}" >
+                    <img class="zoom" src="{% static 'images/cat-shaped.jpg' %}" alt="Snow">
+                    <div class="btn-category">Shaped stones</div>
+                </a>
               </div>
-          </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-3">
+            <div class="container-category">
+                <a href="{% url 'products' %}" >
+                    <img class="zoom" src="{% static 'images/cat-trumbled.jpg' %}" alt="Snow">
+                    <div class="btn-category">Trumbled Gemstones</div>
+                </a>
+              </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-3">
+            <div class="container-category">
+                <a href="{% url 'products' %}" >
+                    <img class="zoom" src="{% static 'images/cat-smoke.jpg' %}" alt="Snow">
+                    <div class="btn-category">Instances</div>
+                </a>
+              </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 mb-3">
+            <div class="container-category">
+                <a href="{% url 'products' %}" >
+                    <img class="zoom" src="{% static 'images/cat-tarot.jpg' %}" alt="Snow">
+                    <div class="btn-category">Cards</div>
+                </a>
+              </div>
+        </div>
+
+    </div>
+
+
 </section>
 {%endblock%}
