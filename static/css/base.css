@@ -7,6 +7,7 @@ body {
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Roboto';
+    background-color: #e7e2ed;
 }
 /*--------------------------------Hero-section*/
 .overlay{
@@ -70,7 +71,7 @@ body {
 /*-------------------------------------------------Nav headers*/
 
 .bg-banner{
-    background-color: #216d82;
+    background-color: #57347a;
 }
 
 .banner-text{
@@ -107,6 +108,10 @@ body {
     color: #57347a;
 }
 
+.header-bg{
+    background-color: #cac0d6;
+}
+
 .main-logo-link {
     width: fit-content;
 }
@@ -134,6 +139,20 @@ body {
 
 .border-black {
     border: 1px solid black !important;
+}
+/*--------------------------------Products*/
+
+.products-img{
+    border-radius: 40px;
+    background-color: #e7e2ed;
+}
+
+.products-body{
+    background-color: #e7e2ed;
+}
+
+.card{
+    background-color: #e7e2ed;
 }
 
 /*---------------------------------Cart*/
@@ -212,9 +231,9 @@ body {
     }
 }
 
-/*Footer*/
+/*-----------------------------------Footer*/
 .footer-bg{
-    background-color: #a793bc;
+    background-color: #cac0d6;
 }
 
 /* Allauth form formatting */
