@@ -64,7 +64,7 @@ body {
   }
   
   .zoom:hover {
-    transform: scale(1.1); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transform: scale(1.1); 
   }
 
 /*-------------------------------------------------Nav headers*/
@@ -210,6 +210,11 @@ body {
     .header-container {
         padding-top: 164px;
     }
+}
+
+/*Footer*/
+.footer-bg{
+    background-color: #a793bc;
 }
 
 /* Allauth form formatting */

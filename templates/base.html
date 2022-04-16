@@ -155,6 +155,38 @@
     {% block content %}
     {% endblock %}
 
+    <footer class="container-fluid pt-2">
+        {% include 'includes/mobile-footer.html' %}
+        {% include 'includes/main-footer.html' %}
+        <div class="row pb-2 pb-lg-3 mt-0 pt-1 pt-lg-2 text-center text-lg-left footer-bg">
+            <div class="col">
+                <div class="row">
+                    <div class="col cream small ml-4">
+                        <span>
+                            &copy; Copyright<span id=copyright></span> Crystalized 
+                        </span>   
+                        <a href="https://github.com/CarlaBuongiorno/la_fraschetta" class="text-decoration-none hvr-grow" target="_blank" rel="noopener">
+                            <i class="fab fa-github fa-lg cream ml-1" aria-hidden="true"></i>
+                            <span class="sr-only">GitHub</span>
+                        </a>
+                        <a href="https://github.com/CarlaBuongiorno/la_fraschetta" class="text-decoration-none hvr-grow" target="_blank" rel="noopener">
+                            <i class="fab fa-instagram fa-lg cream ml-1" aria-hidden="true"></i>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                        <a href="https://github.com/CarlaBuongiorno/la_fraschetta" class="text-decoration-none hvr-grow" target="_blank" rel="noopener">
+                            <i class="fab fa-facebook-square fa-lg cream ml-1" aria-hidden="true"></i>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/carlabuongiorno/" class="text-decoration-none hvr-grow" target="_blank" rel="noopener">
+                            <i class="fab fa-linkedin fa-lg cream ml-1" aria-hidden="true"></i>
+                            <span class="sr-only">linkedin</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     {% block postloadjs %}
     <script type="text/javascript">
         $('.toast').toast('show');
