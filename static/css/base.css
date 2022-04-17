@@ -89,6 +89,10 @@ body {
     width: 1.5rem;
 }
 
+.icon:hover{
+    color: #61428f;
+}
+
 .logo-font {
     text-transform: uppercase;
     font-family: Julius Sans One;
@@ -155,6 +159,25 @@ body {
     background-color: #e7e2ed;
 }
 
+.btn-add {
+    width: 80%;
+    text-align: center;
+    background-color: #3d1d6c;
+    border: none;
+    height: 50px;
+    color: #ffffff;
+}
+
+.btn-add:hover{
+    background-color: #57347a;
+    box-shadow: 5px 5px 7px #ffffff;
+}
+
+.quantity-selector{
+    border: none;
+    background-color: #e7e2ed;
+    width: 45px;
+}
 /*---------------------------------Cart*/
 
 .update-link,

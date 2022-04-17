@@ -11,4 +11,4 @@ class WishList(models.Model):
     logged_user = models.ForeignKey(UserProfile, on_delete=models.CASCADE, null=True)
 
     def __str__(self):
-        return f'Wishlist ({self.logged_user})'
+        return f'WishList ({self.logged_user})'
