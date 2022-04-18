@@ -28,8 +28,8 @@ def add_review(request, product_id):
             messages.error(request, 'Oops, something went wrong! \
                 Please try again.')
 
-    context = {
-        'form': form,
-    }
+        context = {
+            'form': form,
+        }
 
     return render(request, context)

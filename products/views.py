@@ -3,8 +3,12 @@ from django.db.models import Q
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
+
+from reviews.models import Review
+from reviews.forms import ReviewForm
 from .models import Product, Category
 from .forms import ProductForm
+from profiles.models import UserProfile
 
 
 def all_products(request):
@@ -61,9 +65,19 @@ def product_detail(request, product_id):
     """ View to products details"""
 
     product = get_object_or_404(Product, pk=product_id)
+    if request.user.is_authenticated:
+        user = UserProfile.objects.get(user=request.user)
+    else:
+        user = None
+
+    reviews = Review.objects.filter(product=product)
+    
+    review_form = ReviewForm()
 
     context = {
         'product': product,
+        'reviews': reviews,
+        'review_form': review_form,
     }
 
     return render(request, 'products/product_detail.html', context)
