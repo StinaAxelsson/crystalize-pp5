@@ -9,6 +9,7 @@ from reviews.forms import ReviewForm
 from .models import Product, Category
 from .forms import ProductForm
 from profiles.models import UserProfile
+from wishlist.models import WishList
 
 
 def all_products(request):
@@ -65,19 +66,25 @@ def product_detail(request, product_id):
     """ View to products details"""
 
     product = get_object_or_404(Product, pk=product_id)
-    if request.user.is_authenticated:
-        user = UserProfile.objects.get(user=request.user)
-    else:
-        user = None
-
     reviews = Review.objects.filter(product=product)
-    
-    review_form = ReviewForm()
+    user = get_object_or_404(UserProfile, user=request.user)
+    reviews_by_user = None
+
+    if request.user.is_authenticated:
+        reviews_by_user = Review.objects.filter(
+            product=product,
+            user=get_object_or_404(UserProfile, user=request.user)
+        )
+        wishlist = WishList.objects.filter(
+                   logged_user=user, product=product_id)
+    form = ReviewForm()
 
     context = {
         'product': product,
         'reviews': reviews,
-        'review_form': review_form,
+        'form': form,
+        'reviews_by_user': reviews_by_user,
+        'wishlist': wishlist
     }
 
     return render(request, 'products/product_detail.html', context)
