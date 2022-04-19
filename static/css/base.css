@@ -71,7 +71,7 @@ body {
 /*-------------------------------------------------Nav headers*/
 
 .logo-img{
-    height: 6rem;
+    height: rem;
     width: auto;
 }
 
@@ -134,7 +134,7 @@ body {
 
 
 .btn-color{
-    background-color: #216d82;
+    background-color: #57347a;
 
 }
 .btn-color:hover{
@@ -322,10 +322,36 @@ body {
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
     .header-container {
-        padding-top: 116px;
+        padding-top: 200px;
+    }
+    .logo-img{
+        height: 5rem;
+        width: auto;
+        margin-right: 5rem;
     }
 
     body {
-        height: calc(100vh - 116px);
+        height: calc(100vh - 200px);
+    }
+}
+
+@media (max-width: 722px) {
+   
+    .logo-img{
+        height: 5rem;
+        width: auto;
+        margin-right: 0;
+    }
+
+    .header-container {
+        padding-top: 190px;
+    }
+    
+    .pt-3, .py-3 {
+        padding-top: 0rem!important;
+    }
+
+    .banner-text{
+        font-size: 18px;
     }
 }
