@@ -7,7 +7,7 @@ body {
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Roboto';
-    background-color: #e7e2ed;
+    background-color: #fff;
 }
 /*--------------------------------Hero-section*/
 .overlay{
@@ -70,6 +70,12 @@ body {
 
 /*-------------------------------------------------Nav headers*/
 
+.logo-img{
+    height: 6rem;
+    width: auto;
+}
+
+
 .bg-banner{
     background-color: #57347a;
 }
@@ -113,7 +119,7 @@ body {
 }
 
 .header-bg{
-    background-color: #cac0d6;
+    background-color: #e7e2ed;
 }
 
 .main-logo-link {
@@ -147,7 +153,7 @@ body {
 /*--------------------------------Products*/
 
 .products-img{
-    border-radius: 40px;
+    border-radius: 10px;
     background-color: #e7e2ed;
 }
 
@@ -250,13 +256,13 @@ body {
     }
 
     .header-container {
-        padding-top: 164px;
+        padding-top: 200px;
     }
 }
 
 /*-----------------------------------Footer*/
 .footer-bg{
-    background-color: #cac0d6;
+    background-color: #e7e2ed;
 }
 
 /* Allauth form formatting */

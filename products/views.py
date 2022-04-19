@@ -3,6 +3,7 @@ from django.db.models import Q
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models.functions import Lower
+from django.db.models import Avg
 
 from reviews.models import Review
 from reviews.forms import ReviewForm
@@ -70,6 +71,11 @@ def product_detail(request, product_id):
     user = get_object_or_404(UserProfile, user=request.user)
     reviews_by_user = None
 
+    avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
+    if avg_rating is not None:
+        # round to the nearest 0.5 value
+        avg_rating = round(avg_rating * 2) / 2
+
     if request.user.is_authenticated:
         reviews_by_user = Review.objects.filter(
             product=product,
@@ -84,6 +90,7 @@ def product_detail(request, product_id):
         'reviews': reviews,
         'form': form,
         'reviews_by_user': reviews_by_user,
+        'avg_rating': avg_rating,
         'wishlist': wishlist
     }
 

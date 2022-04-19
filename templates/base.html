@@ -16,6 +16,7 @@
     {% block corecss %}
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Julius+Sans+One&family=Roboto:wght@300&display=swap">
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
@@ -50,11 +51,6 @@
         </div>
         <div id="topnav" class="row pt-lg-2 d-none d-lg-flex header-bg">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
-                <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font my-0"><strong>Crystalized</strong> <i class="gem fa fa-regular fa-gem"></i></h2>
-                </a>
-            </div>
-            <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="{% url 'products' %}">
                     <div class="input-group w-100">
                         <input class="form-control border border-black rounded-0" type="text" name="q" placeholder="Search our site">
@@ -68,6 +64,11 @@
                     </div>
                 </form>
             </div>
+            <div class="col-12 col-lg-4 my-auto py-2 py-lg-0">
+                <a href="{% url 'home' %}" class="nav-link main-logo-link">
+                    <img class="img-fluid logo-img" src="{{ MEDIA_URL }}logo.jpg" alt="Crystalized shop">
+                </a>
+            </div>
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     {% if request.user.is_authenticated %}
@@ -75,9 +76,9 @@
             <a class="nav-link d-block " href="{% url 'wishlist' %}">
                 <div class="text-center">
                     <div>
-                        <i class="fas fa-heart fa-lg"></i>
+                        <i class="bi bi-star"></i>
                     </div>
-                    <p>Wishlist</p>
+                   
                 </div>
             </a>
         </li>
@@ -85,8 +86,8 @@
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="fas fa-user fa-lg"></i></div>
-                                <p class="my-0">Profile</p>
+                                <div><i class="bi bi-person"></i></div>
+                                
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -106,7 +107,7 @@
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
                             <div class="text-center">
-                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <div><i class="bi bi-cart"></i></div>
                                 <p class="my-0">
                                 {% if grand_total %}
                                     ${{ grand_total|floatformat:2 }}
