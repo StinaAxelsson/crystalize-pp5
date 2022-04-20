@@ -117,14 +117,18 @@
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
                             <div class="text-center">
-                                <div><i class="bi bi-cart"></i></div>
-                                <p class="my-0">
-                                {% if grand_total %}
-                                    ${{ grand_total|floatformat:2 }}
-                                {% else %}
-                                    $0.00
-                                {% endif %}
-                                </p>
+                                <button type="button" class="mr-4 position-relative cart-icon">
+                                    <i class="bi bi-cart"></i>
+                                    <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                        {% if grand_total %}
+                                        ${{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                        $0.00
+                                        {% endif %}
+                                      
+                                    </span>
+                                  </button>
+                            
                             </div>
                         </a>
                     </li>

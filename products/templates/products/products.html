@@ -63,20 +63,14 @@
                                 </a>
                                 {% endif %}
                                 <div class="card-body pb-0 products-body">
-                                    <h4 class="mb-0">{{ product.name }}</h4>
+                                    <h5 class="mb-0">{{ product.name }}</h5>
                                 </div>
                                 
                                 <div class="card-footer products-body pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
                                             <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                                            {% if product.category %}
-                                            <p class="small mt-1 mb-0">
-                                                <a href="{% url 'products' %}?category={{ product.category.name }}">
-                                                    <i class="fas fa-tag mr-1"></i>{{ product.category.friendly_name }}
-                                                </a>
-                                            </p>
-                                            {% endif %}
+                                            
                                             {% if product.rating %}
                                                 <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
                                             {% else %}
