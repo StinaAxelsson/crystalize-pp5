@@ -8,9 +8,10 @@
         <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
             <hr>
             {% if reviews.count %}
-            <h4>Product Reviews ({{ reviews.count }})</h4>
+            <h4>Product Reviews for {{ product.name }} ({{ reviews.count }})</h4>
             {% else %}
             <h4>Product Reviews (0)</h4>
+            <p> Be the first to add an review for this product! </p>
             {% endif %}
         </div>
     </div>
@@ -20,93 +21,45 @@
             <article>
                 <i class="bi bi-person fa-lg"></i> {{ review.user }}  <i class="bi bi-calendar2"></i>  {{ review.date_posted }}<br>
                 {{ review.review_body }}
-                {% if avg_rating == 5 %}
+                {% if review.rating == 5 %}
                     <p>
-                        <small class="green-muted">
+                        <small class="">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            ({{ reviews.count }} reviews)
-
                         </small>
                     </p>
-                {% elif avg_rating == 4.5 %}
+                {% elif review.rating == 4 %}
                     <p>
-                        <small class="green-muted">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            ({{ reviews.count }} reviews)
-                    </p>
-                {% elif avg_rating == 4 %}
-                    <p>
-                        <small class="green-muted">
+                        <small class="">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
-                            ({{ reviews.count }} reviews)
                     </p>
-                {% elif avg_rating == 3.5 %}
+                {% elif review.rating == 3 %}
                     <p>
-                        <small class="green-muted">
+                        <small class="">
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
                             <i class="far fa-star"></i>
-                            ({{ reviews.count }} reviews)
+                            <i class="far fa-star"></i>
+                    </p>
+                {% elif review.rating == 2 %}
+                    <p>
+                        <small class="">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
                         </small>
                     </p>
-                {% elif avg_rating == 3 %}
-                    <p>
-                        <small class="green-muted">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            ({{ reviews.count }} reviews) 
-                        </small>
-                    </p>
-                {% elif avg_rating == 2.5 %}
-                    <p>
-                        <small class="green-muted">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            ({{ reviews.count }} reviews) 
-                        </small>
-                    </p>
-                {% elif avg_rating == 2 %}
-                    <p>
-                        <small class="green-muted">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            ({{ reviews.count }} reviews) 
-                    </p>
-                {% elif avg_rating == 1.5 %}
-                    <p>
-                        <small class="green-muted">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            <i class="far fa-star"></i>
-                            ({{ reviews.count }} reviews) 
-                        </small>
-                    </p>
-                {% elif avg_rating == 1 %}
+                {% elif review.rating == 1 %}
                     <p>
                         <small class="">
                             <i class="fas fa-star"></i>
@@ -114,12 +67,12 @@
                             <i class="far fa-star"></i>
                             <i class="far fa-star"></i>
                             <i class="far fa-star"></i>
-                            ({{ reviews.count }} reviews) 
                         </small>
                     </p>
+                
                 {% else %}
                     <p>
-                        <small class="green-muted">
+                        <small class="">
                             No Reviews
                         </small>
                     </p>

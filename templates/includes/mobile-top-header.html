@@ -5,7 +5,7 @@
         <div class="text-center">
             <button type="button" class="mr-4 position-relative cart-icon">
                 <i class="bi bi-cart"></i>
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-total">
                     {% if grand_total %}
                     ${{ grand_total|floatformat:2 }}
                     {% else %}

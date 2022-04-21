@@ -81,6 +81,10 @@ body {
     background-color: #57347a;
 }
 
+.bg-total{
+    background-color: rgb(124 0 255 / 25%);
+}
+
 .banner-text{
     color: #f1f1f1;
     font-family: Julius Sans One;
@@ -149,10 +153,14 @@ body {
 
 .btn-color{
     background-color: #57347a;
+    width: 150px;
+    padding: 15px;
+px
+;
 
 }
 .btn-color:hover{
-    background-color: #0eb6a6;
+    background-color: #57347aa2;
 }
 
 
