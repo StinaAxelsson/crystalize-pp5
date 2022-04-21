@@ -71,8 +71,9 @@ body {
 /*-------------------------------------------------Nav headers*/
 
 .logo-img{
-    height: rem;
+    height: 6rem;
     width: auto;
+    margin-left: 90px;
 }
 
 
@@ -92,17 +93,24 @@ body {
     font-size: large;
 }
 
-/* from Bulma */
-.icon {
-    align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    height: 1.5rem;
-    width: 1.5rem;
+.navbar-shadow{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.icon:hover{
+/* from Bulma */
+.icon-nav {
+   
+    
+    justify-content: center;
+    height: 2rem;
+    width: 2rem;
+    color: #000;
+}
+
+.icon-nav:hover{
     color: #61428f;
+    text-shadow: #aab7c4 3px 3px 3px;
+    
 }
 
 .logo-font {
@@ -251,6 +259,7 @@ body {
   .container {
     max-width: 80%;
   }
+
 }
 
 /* fixed top navbar only on medium and up */
@@ -265,6 +274,10 @@ body {
 
     .header-container {
         padding-top: 200px;
+    }
+
+    .logo-img{
+        margin-left: 0px;
     }
 }
 
@@ -335,7 +348,7 @@ body {
     .logo-img{
         height: 5rem;
         width: auto;
-        margin-right: 5rem;
+        
     }
 
     body {
@@ -346,13 +359,13 @@ body {
 @media (max-width: 722px) {
    
     .logo-img{
-        height: 5rem;
+        height: 3rem;
         width: auto;
-        margin-right: 0;
+        margin-left: 0;
     }
 
     .header-container {
-        padding-top: 135px;
+        padding-top: 95px;
     }
     
     .pt-3, .py-3 {

@@ -63,7 +63,7 @@
                     <li class="list-inline-item">
                         <a class="text-black nav-link d-block " href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="bi bi-search"></i></div>
+                                <div><i class="bi bi-search icon-nav"></i></div>
                             </div>
                         </a>
                         <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="search">
@@ -86,7 +86,7 @@
                             <a class="nav-link d-block " href="{% url 'wishlist' %}">
                                 <div class="text-center">
                                     <div>
-                                        <i class="bi bi-star"></i>
+                                        <i class="bi bi-star icon-nav"></i>
                                     </div>
                                 
                                 </div>
@@ -96,7 +96,7 @@
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
-                                <div><i class="bi bi-person"></i></div>
+                                <div><i class="bi bi-person icon-nav"></i></div>
                                 
                             </div>
                         </a>
@@ -118,7 +118,7 @@
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
                             <div class="text-center">
                                 <button type="button" class="mr-4 position-relative cart-icon">
-                                    <i class="bi bi-cart"></i>
+                                    <i class="bi bi-cart icon-nav"></i>
                                     <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                                         {% if grand_total %}
                                         ${{ grand_total|floatformat:2 }}
@@ -136,7 +136,7 @@
             </div>
         </div>
         <div class="row header-bg">
-            <nav class="navbar navbar-main-lg navbar-expand-lg navbar-light w-100 bg-cream pt-3 pt-lg-2">
+            <nav class="navbar navbar-main-lg navbar-expand-lg navbar-light w-100 navbar-shadow pt-3 pt-lg-2">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
