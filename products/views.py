@@ -68,7 +68,7 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.filter(product=product)
-    user = get_object_or_404(UserProfile, user=request.user)
+    
     reviews_by_user = None
 
     avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
@@ -76,25 +76,34 @@ def product_detail(request, product_id):
         # round to the nearest 0.5 value
         avg_rating = round(avg_rating * 2) / 2
 
-    if request.user.is_authenticated:
+    if not request.user.is_authenticated:
+        context = {
+            'product': product,
+            'reviews': reviews,
+            'avg_rating': avg_rating,
+        }
+        return render(request, 'products/product_detail.html', context)
+    else:
+        user = get_object_or_404(UserProfile, user=request.user)
         reviews_by_user = Review.objects.filter(
             product=product,
             user=get_object_or_404(UserProfile, user=request.user)
         )
         wishlist = WishList.objects.filter(
                    logged_user=user, product=product_id)
-    form = ReviewForm()
 
-    context = {
-        'product': product,
-        'reviews': reviews,
-        'form': form,
-        'reviews_by_user': reviews_by_user,
-        'avg_rating': avg_rating,
-        'wishlist': wishlist
-    }
+        form = ReviewForm()
 
-    return render(request, 'products/product_detail.html', context)
+        context = {
+            'product': product,
+            'reviews': reviews,
+            'form': form,
+            'reviews_by_user': reviews_by_user,
+            'avg_rating': avg_rating,
+            'wishlist': wishlist
+        }
+
+        return render(request, 'products/product_detail.html', context) 
 
 
 @login_required

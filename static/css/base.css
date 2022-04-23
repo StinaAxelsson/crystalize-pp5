@@ -155,8 +155,6 @@ body {
     background-color: #57347a;
     width: 150px;
     padding: 15px;
-px
-;
 
 }
 .btn-color:hover{
@@ -213,6 +211,25 @@ px
 .update-link,
 .remove-item{
     cursor: pointer;
+}
+
+/*------------------------------------Buttons*/
+.save-wish{
+    text-decoration: none;
+    color: #3d1d6c;
+}
+.save-wish:hover{
+    color: rgba(123, 0, 255, 0.601);
+    text-decoration: none;
+}
+
+.delete-wish{
+    color: rgba(123, 0, 255, 0.574);
+    text-decoration: none;
+}
+.delete-wish:hover{
+    text-decoration: none;
+    color: #3d1d6c;
 }
 
 /*----------------------------------Toast messages*/
@@ -383,4 +400,5 @@ px
     .banner-text{
         font-size: 18px;
     }
+   
 }

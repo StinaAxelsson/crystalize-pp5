@@ -39,3 +39,26 @@ def add_review(request, product_id):
         }
 
     return render(request, context)
+
+@login_required
+def delete_review(request, review_id):
+    """
+    Delete a review
+    """
+    review = get_object_or_404(Review, pk=review_id)
+    product = Product.objects.get(name=review.product)
+    user = get_object_or_404(UserProfile, user=request.user)
+
+    if request.user.is_authenticated:
+        review.delete()
+        reviews = Review.objects.filter(product=product)
+        avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
+        if avg_rating:
+            product.avg_rating = int(avg_rating)
+        else:
+            product.avg_rating = 0
+
+        product.save()
+        messages.success(request, 'Your review was deleted')
+
+    return redirect(reverse('product_detail', args=(review.product.id,)))

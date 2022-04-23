@@ -5,9 +5,9 @@ This project is developed as my 5th and final portfolio project during my course
 
 Here is a livelink to the project: [Crystalizedshop](https://crystalizedshop.herokuapp.com/)
 
-**Cardnumber:**   4242 4242 4242 4242 
-**CVC:**   424
-**Postnumber:**   42424
+**Cardnumber:** 4242 4242 4242 4242   
+**CVC:** 424   
+**Postnumber:** 42424   
 
 # Content
 * [Project Description](https://github.com/StinaAxelsson/crystalize-pp5#project-description)

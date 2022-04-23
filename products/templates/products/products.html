@@ -51,7 +51,7 @@
                 </div>
                 <div class="row">
                     {% for product in products %}
-                        <div class="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3 products-body">
+                        <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3 products-body">
                             <div class="card h-100 border-0">
                                 {% if product.image %}
                                 <a href="{% url 'product_detail' product.id %}">
@@ -64,7 +64,7 @@
                                 {% endif %}
                                 <div class="card-body pb-0 products-body">
                                     <a href="{% url 'product_detail' product.id %}" class="text-decoration-none">
-                                    <h5 class="mb-0 text-black">{{ product.name }}</h5>
+                                    <h5 class="mb-0 text-black ">{{ product.name }}</h5>
                                 </a>
                                 </div>
                                 
@@ -89,8 +89,8 @@
                                 </div>
                             </div>
                         </div>
-                        {% if forloop.counter|divisibleby:1 %}
-                            <div class="col-12 d-sm-none mb-5">
+                        {% if forloop.counter|divisibleby:2 %}
+                            <div class="col-12  d-lg-none mb-5">
                                 <hr>
                             </div>
                         {% endif %}                        
