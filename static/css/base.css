@@ -232,6 +232,10 @@ body {
     color: #3d1d6c;
 }
 
+.checkout-btns{
+    background-color: rgb(124 0 255 / 25%);
+  }
+
 /*----------------------------------Toast messages*/
 
 .message-container{
@@ -309,6 +313,20 @@ body {
 /*-----------------------------------Footer*/
 .footer-bg{
     background-color: #e7e2ed;
+}
+
+.social-icons{
+    size: 25px;
+    color: #3d1d6c;
+}
+
+.social-icon-small{
+    color: #3d1d6c;
+}
+
+.social-icon-small:hover,
+.social-icons:hover{
+    color: #000;
 }
 
 /* Allauth form formatting */
