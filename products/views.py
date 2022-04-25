@@ -53,11 +53,18 @@ def all_products(request):
     
     current_sorting = f'{sort}_{direction}'
 
+    wishlist = None
+    if request.user.is_authenticated:
+        user = get_object_or_404(UserProfile, user=request.user)
+        wishlist = WishList.objects.filter(logged_user=user)
+
     context = {
         'products': products,
         'search_term': query,
         'current_categories': categories,
         'current_sorting': current_sorting,
+        'wishlist': wishlist,
+
     }
 
     return render(request, 'products/products.html', context)

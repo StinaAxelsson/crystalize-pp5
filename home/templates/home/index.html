@@ -35,7 +35,7 @@ d-flex flex-column justify-content-center">
     <div class="row flex">
         <div class="col-lg-4 col-sm-6">
             <div class="container-category">
-                <a href="{% url 'products' %}" >
+                <a href="{% url 'products' %}?category=clusters" >
                 <img class="zoom" src="{% static 'images/cat-cluster.jpg' %}" alt="Snow">
                 <div class="btn-category">Clusters</div>
             </a>
@@ -43,7 +43,7 @@ d-flex flex-column justify-content-center">
         </div>
         <div class="col-lg-4 col-sm-6 mb-3">
             <div class="container-category">
-                <a href="{% url 'products' %}" >
+                <a href="{% url 'products' %}?category=raw" >
                     <img class="zoom" src="{% static 'images/cat-raw.jpg' %}" alt="Snow">
                     <div class="btn-category">Raw gemstones</div>
                 </a>
@@ -51,15 +51,15 @@ d-flex flex-column justify-content-center">
         </div>
         <div class="col-lg-4 col-sm-6 mb-3">
             <div class="container-category">
-                <a href="{% url 'products' %}" >
+                <a href="{% url 'products' %}?category=bigcrystals,towers" >
                     <img class="zoom" src="{% static 'images/cat-shaped.jpg' %}" alt="Snow">
-                    <div class="btn-category">Shaped stones</div>
+                    <div class="btn-category">Big Crystals and Towers</div>
                 </a>
               </div>
         </div>
         <div class="col-lg-4 col-sm-6 mb-3">
             <div class="container-category">
-                <a href="{% url 'products' %}" >
+                <a href="{% url 'products' %}?category=trumbled" >
                     <img class="zoom" src="{% static 'images/cat-trumbled.jpg' %}" alt="Snow">
                     <div class="btn-category">Trumbled Gemstones</div>
                 </a>
@@ -67,7 +67,7 @@ d-flex flex-column justify-content-center">
         </div>
         <div class="col-lg-4 col-sm-6 mb-3">
             <div class="container-category">
-                <a href="{% url 'products' %}" >
+                <a href="{% url 'products' %}?category=incensesburners,whitesages" >
                     <img class="zoom" src="{% static 'images/cat-smoke.jpg' %}" alt="Snow">
                     <div class="btn-category">Instances</div>
                 </a>
@@ -75,9 +75,9 @@ d-flex flex-column justify-content-center">
         </div>
         <div class="col-lg-4 col-sm-6 mb-3">
             <div class="container-category">
-                <a href="{% url 'products' %}" >
+                <a href="{% url 'products' %}?category=tarotcards,books" >
                     <img class="zoom" src="{% static 'images/cat-tarot.jpg' %}" alt="Snow">
-                    <div class="btn-category">Cards</div>
+                    <div class="btn-category">Cards and Books</div>
                 </a>
               </div>
         </div>

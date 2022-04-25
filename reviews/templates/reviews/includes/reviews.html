@@ -21,7 +21,7 @@
             <article>
                 <i class="bi bi-person fa-lg"></i> {{ review.user }}  
                 <i class="bi bi-calendar2"></i>  {{ review.date_posted }}
-                {% if request.user.is_authenticated %}
+                {% if request.user == review.user %}
                     <a href="{% url 'delete_review' review.pk  %}">Delete</a>
                 {% endif %}<br>
                 {{ review.review_body }} 

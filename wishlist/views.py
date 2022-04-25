@@ -41,6 +41,6 @@ def delete_in_wishlist(request, product_id):
 
     user = get_object_or_404(UserProfile, user=request.user)
     product = get_object_or_404(Product, pk=product_id)
-    WishList.objects.filter(product=product).delete()
+    WishList.objects.filter(product=product, logged_user=user).delete()
 
     return redirect(reverse('product_detail', args=[product.id]))

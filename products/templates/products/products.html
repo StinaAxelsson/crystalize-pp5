@@ -64,20 +64,22 @@
                                 {% endif %}
                                 <div class="card-body pb-0 products-body">
                                     <a href="{% url 'product_detail' product.id %}" class="text-decoration-none">
-                                    <h5 class="mb-0 text-black ">{{ product.name }}</h5>
-                                </a>
+                                    <p class="mb-0 text-black ">{{ product.name }}
+                                        {% for item in wishlist %}
+                                            {% if product.id == item.product.id %}
+                                                <span class="ml-2"><i class="bi bi-star-fill delete-wish"></i></span>
+                                            {% else %}
+                                                <span class="ml-2"><i class="bi bi-star"></i></span>
+                                            {% endif %}
+                                        {% endfor %}    
+                                    </p>
+                                    </a>
                                 </div>
                                 
                                 <div class="card-footer products-body pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
                                             <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
-                                            
-                                            {% if product.rating %}
-                                                <small class="text-muted"><i class="fas fa-star mr-1"></i>{{ product.rating }} / 5</small>
-                                            {% else %}
-                                                <small class="text-muted">No Rating</small>
-                                            {% endif %}
                                             {% if request.user.is_superuser %}
                                             <small class="ml-3">
                                                 <a href="{% url 'edit_product' product.id %}">Edit</a> | 
