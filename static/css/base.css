@@ -41,17 +41,17 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    text-align: center;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     color: white;
-    font-size: 18px;
+    font-size: 25px;
     padding: 12px 24px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
+    background-color: rgba(123, 0, 255, 0.3);
   }
-
-
   
   .container-category  {
     background-color: black;
@@ -155,6 +155,7 @@ body {
     background-color: #57347a;
     width: 150px;
     padding: 15px;
+    margin-top: 1rem;
 
 }
 .btn-color:hover{
@@ -235,6 +236,16 @@ body {
 .checkout-btns{
     background-color: rgb(124 0 255 / 25%);
   }
+  .checkout-btns:hover{
+    background-color: rgb(124 0 255 / 55%);
+  }
+/*------------------------------------Forms*/
+.textInput{
+    width: 100%;
+    height: 35px;
+    margin-bottom: 15px;
+    
+}
 
 /*----------------------------------Toast messages*/
 
