@@ -21,11 +21,12 @@
             <article>
                 <i class="bi bi-person fa-lg"></i> {{ review.user }}  
                 <i class="bi bi-calendar2"></i>  {{ review.date_posted }}
-                {% if request.user == review.user %}
-                    <a href="{% url 'delete_review' review.pk  %}">Delete</a>
-                {% endif %}<br>
-                {{ review.review_body }} 
-                
+                {% if request.user.is_authenticated %}
+                        <a class="badge badge-pill border-black" href="{% url 'delete_review' review.id %}">Delete</a>
+                {% endif %}
+                <div>
+                    {{ review.review_body }} 
+                </div>
                 {% if review.rating == 5 %}
                     <p>
                         <small class="">
@@ -117,10 +118,8 @@
                     <form method="POST" action="{% url 'add_review' product.id %}">
                         {% csrf_token %}
                         {{ form | crispy }}
-                        <input type="submit" class="btn btn-black thick-btn-border rounded-1 text-uppercase mt-1" value="Add Review">
-                    </form>
-                    
-                    
+                        <input type="submit" class="btn checkout-btns rounded-1 text-uppercase mt-1" value="Add Review">
+                    </form> 
                 {% endif %}
             </div>
         </div>

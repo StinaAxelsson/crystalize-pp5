@@ -3,11 +3,11 @@
 
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
@@ -21,34 +21,58 @@
     </div>
 </div>
 
-<div class="row">
-    
-        {% if wishlist %}
-        {% for item in wishlist %}
-        <div class="col-12 col-md-6">
-                    <div class="card mb-4">
-                            <img src="{{ item.product.image.url }}" class="card-img-top img-fluid">
-                            <div class="card-body">
-                              <h5 class="card-title">{{ item.product.name }}</h5>
-                              <p class="my-0"><strong>${{ item.product.price }}</strong></p>
-                              <p class="card-text"><small>{{ item.product.description }}</small></p>
-                              
-                              <a href="{% url 'product_detail' item.product.id %}" class="btn btn-primary">Back to product</a>
-                              <a href="{% url 'delete_in_wishlist' item.product.id %}" class="btn btn-primary">Delete</a>
-                            </div>
-                          </div>
-                          </div>
-                        </div>
-                        {% endfor %}
-            </div>
-        {% else %}
-            <p class="lead mb-5 green">You have no products in your Wishlist.</p>
-        {% endif %}
+<div class="row mb-5 justify-content-center">
+    <div class="col-sm-8 align-center">
+    {% if wishlist %}
+    <div class="table-responsive ">
+        <table cellspacing="0" width="100%" class="table text-center">
+            <thead>
+                <tr>
+                    <th scope="col">product</th>
+                    <th scope="col">price</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody class="text-center">
+                {% for product in wishlist %}
+                <tr>
+                    <td class="p-3 w-25">
+                        <ul class="list-unstyled">
+                            <li>{{ product.product.name }}</li>
+                            <li> <img class="img-thumbnail" src="{{ product.product.image.url }}"
+                                    alt="{{ product.product.name }} image"></li>
+                        </ul>
+                    </td>
+                    <td class="py-3">
+                        <p class="my-0"><strong>${{ product.product.price }}</strong></p>
+                    </td>
+                    <td class="py-3">
+                        <ul class="list-unstyled">
+                            <li>
+                                <a class="text-black" href="{% url 'delete_in_wishlist' product.product.id %}">
+                                    <i class="fas fa-trash-alt"></i> Delete
+                                </a>
+                            </li>
+                            <li>
+                                <a class="text-black" href="{% url 'product_detail' product.product.id %}">
+                                    Back to Product
+                                </a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                {% endfor %}
+
+        </table>
     </div>
-</div>   
+    {% else %}
+    <h5>currently no items in your wishlist.</h5>
+    {% endif %}
+</div>
+</div>
 <div class="row mt-2">
     <div class="col text-center">
-        <a href="{% url 'products' %}" class="btn btn-green">
+        <a href="{% url 'products' %}" class="btn checkout-btns">
             <span class="icon">
                 <i class="fas fa-chevron-left"></i>
             </span>

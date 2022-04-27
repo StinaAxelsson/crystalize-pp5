@@ -2,29 +2,28 @@
 {% load static %}
 
 {% block page_header %}
-    <div class="container header-container">
-        <div class="row">
-            <div class="col"></div>
-        </div>
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
     </div>
+</div>
 {% endblock %}
 
 {% block content %}
 <header class="hero-section">
     <div class="overlay">
-<div class="container h-100 text-uppercase text-headings text-center 
-d-flex flex-column justify-content-center">
-    <div class="row ">
-        <div class="col-12 text-white py-4 py-lg-5">
-            <h2 class="rubrics-font">Let the magic begin</h2>
-            <div class="d-flex justify-content-center mt-3">
-                <a href="{% url 'products' %}" class="btn btn-color mr-2 text-white">Shop now!</a>
+        <div class="container h-100 text-uppercase text-headings text-center 
+                d-flex flex-column justify-content-center">
+            <div class="row ">
+                <div class="col-12 text-white py-4 py-lg-5">
+                    <h2 class="rubrics-font">Let the magic begin</h2>
+                    <div class="d-flex justify-content-center mt-3">
+                        <a href="{% url 'products' %}" class="btn btn-color mr-2 text-white">Shop now!</a>
+                    </div>
+                </div>
             </div>
-            
         </div>
     </div>
-</div>
-</div>
 </header>
 <section class="container">
     <div class="row">
@@ -35,51 +34,51 @@ d-flex flex-column justify-content-center">
     <div class="row flex">
         <div class="col-lg-4 col-sm-6">
             <div class="container-category">
-                <a href="{% url 'products' %}?category=clusters" >
-                <img class="zoom" src="{% static 'images/cat-cluster.jpg' %}" alt="Snow">
-                <div class="btn-category">Clusters</div>
-            </a>
-              </div>
+                <a href="{% url 'products' %}?category=clusters">
+                    <img class="zoom" src="{% static 'images/cat-cluster.jpg' %}" alt="Snow">
+                    <div class="btn-category">Clusters</div>
+                </a>
+            </div>
         </div>
         <div class="col-lg-4 col-sm-6 mb-3">
             <div class="container-category">
-                <a href="{% url 'products' %}?category=raw" >
+                <a href="{% url 'products' %}?category=raw">
                     <img class="zoom" src="{% static 'images/cat-raw.jpg' %}" alt="Snow">
                     <div class="btn-category">Raw gemstones</div>
                 </a>
-              </div>
+            </div>
         </div>
         <div class="col-lg-4 col-sm-6 mb-3">
             <div class="container-category">
-                <a href="{% url 'products' %}?category=bigcrystals,towers" >
+                <a href="{% url 'products' %}?category=bigcrystals,towers">
                     <img class="zoom" src="{% static 'images/cat-shaped.jpg' %}" alt="Snow">
                     <div class="btn-category">Big Crystals and Towers</div>
                 </a>
-              </div>
+            </div>
         </div>
         <div class="col-lg-4 col-sm-6 mb-3">
             <div class="container-category">
-                <a href="{% url 'products' %}?category=trumbled" >
+                <a href="{% url 'products' %}?category=trumbled">
                     <img class="zoom" src="{% static 'images/cat-trumbled.jpg' %}" alt="Snow">
                     <div class="btn-category">Trumbled Gemstones</div>
                 </a>
-              </div>
+            </div>
         </div>
         <div class="col-lg-4 col-sm-6 mb-3">
             <div class="container-category">
-                <a href="{% url 'products' %}?category=incensesburners,whitesages" >
+                <a href="{% url 'products' %}?category=incensesburners,whitesages">
                     <img class="zoom" src="{% static 'images/cat-smoke.jpg' %}" alt="Snow">
                     <div class="btn-category">Instances</div>
                 </a>
-              </div>
+            </div>
         </div>
         <div class="col-lg-4 col-sm-6 mb-3">
             <div class="container-category">
-                <a href="{% url 'products' %}?category=tarotcards,books" >
+                <a href="{% url 'products' %}?category=tarotcards,books">
                     <img class="zoom" src="{% static 'images/cat-tarot.jpg' %}" alt="Snow">
                     <div class="btn-category">Cards and Books</div>
                 </a>
-              </div>
+            </div>
         </div>
 
     </div>
