@@ -59,20 +59,26 @@ Here is a livelink to the project: [Crystalizedshop](https://crystalizedshop.her
 * As a shopper I can receive a confirmation email of my purchase so that I know my purchase went through successfully.
 
 ### EPIC 5: Reviews
+* As a user I can read other users reviews on products so that Im able to get knowledge of others opinions of the product
+* As a user I can add an review of the products so that I can share my opinion about it to other potential buyers
+
 ### EPIC 6: Wishlist
+* As a shopper I can Choose to add a item to a wishlist page so that I can save my favourites product but not yet decide if I want to buy it
+* As a user I can delete a item from my wishlist if I don't want it anymore so that I can control my wishlist page and clean it from unwanted items
+* As a user I can Easy navigate to the item in my saved wishlist so that I can choose to put it in the cart if I wanted to buy it
 ## Site owner goals
 ## Structure
 ## Design Choises
 ### Fonts
+I have used the font 'Julius Sans One' for all the Rubrics on the site, it is a clean and soft font that match the theme. And for the rest of the texts I am using 'Roboto' just because it is nice to read and don't take any attention.
 ### Colors
-Colours for the website is inpired by the Northen Lights magical colours.
-![nothen light](https://github.com/StinaAxelsson/project-5/blob/main/media/norrsken.jpg)
+THe colors for this site is white and different shades of purple. It is a soft and calm colour that match the theme and the product of the site. Indicate a calm feeling for the user. 
 ### Colour Schema
 ![color scheme](https://github.com/StinaAxelsson/project-5/blob/main/media/colorscheme.jpg)
 ## Wireframes
-  * [Desktop]()
-  * [Tablet]()
-  * [Mobile]()
+  * [Browser](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/media/images/wireframe-browser.pdf)
+  * [Tablet](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/media/images/wireframe-tablet.pdf)
+  * [Mobile](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/media/images/wireframe-mobile.pdf)
 
 ## Existing features
 
@@ -158,8 +164,6 @@ Colours for the website is inpired by the Northen Lights magical colours.
 | Rating      	| rating          	| max_digits=6   	| DecimalField 	|
 
 
-
-
 # Technologies used
 ## Languages
   * HTML5
@@ -173,14 +177,12 @@ Colours for the website is inpired by the Northen Lights magical colours.
   * Jquery
   * Stripe Payments
 ## Tools
-  * AWS
-  * Heroku
+  * * [AWS storage]()- Store all the static files
+  * [Heroku]()- Deploy my site
   * Git
   * Postgres
 ## Other programmes
-  * [AWS storage]()- Store all the static files
   * [Stripe]()- Make secure payments
-  * [Heroku]()- Deploy my site
   * [Gitpod]()- Development workspace
   * [Github]()- Store my repository, code and user stoys
   * [Balsamiq]()- Make my wireframes 
@@ -191,6 +193,7 @@ Colours for the website is inpired by the Northen Lights magical colours.
   * [Color palett generator]()- generate a plaett with color hexadecimals
   * [Chrome Devtools]()- Helpful during development to find bugs, and issues
   * [Markdown table generator]()- Generate table for readme
+  * [Pixlr](https://pixlr.com/se/x/#home)- Create the logo image
 
 # Testing
 ## Manually testing by user stories
