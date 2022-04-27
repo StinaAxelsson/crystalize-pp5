@@ -44,17 +44,17 @@ body {
     text-align: center;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-    color: white;
+    color: #57347a;
     font-size: 25px;
     padding: 12px 24px;
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    background-color: rgba(123, 0, 255, 0.3);
+    background-color: #e7e2edbd;
   }
   
   .container-category  {
-    background-color: black;
+    background-color: #000;
   }
 
   .zoom {
@@ -146,7 +146,7 @@ body {
 
 .shop-now-button {
     background: rgb(85, 75, 75);
-    color: white;
+    color: #fff;
     min-width: 260px;
 }
 
@@ -169,7 +169,7 @@ body {
 }
 
 .border-black {
-    border: 1px solid black !important;
+    border: 1px solid #000 !important;
 }
 /*--------------------------------Products*/
 

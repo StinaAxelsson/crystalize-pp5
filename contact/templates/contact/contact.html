@@ -22,7 +22,7 @@
     <!--contact form structure-->
     <div class="row pb-5 justify-center">
         <div class="col-12 col-md-6">
-            <form method="POST" action="{% url 'contact' %}" class="form mb-2" id="contact-form"">
+            <form method="POST" action="{% url 'contact' %}" class="form mb-2" id="contact-form">
                 {% csrf_token %}
                 {{ form | crispy }}
                 <div class=" text-right">
