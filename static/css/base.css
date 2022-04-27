@@ -239,6 +239,10 @@ body {
   .checkout-btns:hover{
     background-color: rgb(124 0 255 / 55%);
   }
+
+.btn:hover{
+    background-color: rgb(124 0 255 / 55%);
+}
 /*------------------------------------Forms*/
 .textInput{
     width: 100%;
@@ -247,6 +251,15 @@ body {
     
 }
 
+textarea{
+    width: 100%;
+}
+
+.emailinput{
+    width: 100%;
+    margin-bottom: 1rem;
+    height: 2.4rem;
+}
 /*----------------------------------Toast messages*/
 
 .message-container{
