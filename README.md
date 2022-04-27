@@ -197,6 +197,78 @@ THe colors for this site is white and different shades of purple. It is a soft a
 
 # Testing
 ## Manually testing by user stories
+### EPIC 1: Navigation
+**Implementations:** As a user I can view all the products in store so that I can easy scroll and choose what to buy  
+**Test:** Tested this by view the homepage and try to navigate from the navigation bar to products, where all products is find and it is easy to scroll.   
+**Result:** This test pass and works  
+
+**Implementations:** As a user I can navigate the site from wherever I am on the site so that I can have a good user experience  
+**Test:** Tested this and all products is well sorted throughout the website in the navigationbar and can be reach from all different screen sizes.  
+**Result:** This test pass and works
+
+**Implementations:** As a user I can get a visual feedback so that I can see that an action has been completed.  
+**Test:** I tested this by add products to cart, add to wishlist, sign in, make a purshase and update or delete an item from shoppingcart and I get an informational feedback message in all of the above actions.  
+**Result:** This test passed and works.
+
+**Implementations:**  As a user I can search for a product so that I find the item that I was looking for  
+**Test:** In the main navigation bar, there is a search icon where you can search by name, category, words from the product description and get the results by the search query. Or get a message that my search didn't work.  
+**Result:** This test passed and works.  
+### EPIC 2: Shopper
+**Implementations:** As a shopper I can easy see my cart total so that I have a overview of my shopping budget  
+**Test:** In the right corner of the website, there is a cart-icon with the cart total of what I as a shopper has added and can be seen from all the pages and different screen devices.  
+**Result:**  This test pass and works  
+
+**Implementations:** As a shopper I can sort the list of available products by name or price or alphabetic order so that I easily can sort and get an overview of the products that I am looking for    
+**Test:** I tested this by click on the sort dropdown in products page, as a user i can chose to sort my product view by name(A-Z)/(Z-A), By rating high to low/low to high, category(A-Z)/(Z-A) and price low to high/ high to low  
+**Result:**  This test pass and works in all ways.  
+### EPIC 3: Profile
+**Implementations:** As a user I can create an account and register a profile so that I can view my order history and confirmations, and save my payment information  
+**Test:**  I tested this by register an account and make a purshase. In my profile page I got my profile information stored and can be updated. My order history is saved.  
+**Result:** This test pass
+
+**Implementations:** As a user I can easy login or logout from my account so that I can access my profile information  
+**Test:** Tested this by click on my profile in the navigationbar and can choose to logout. Or if I am logged out I can sign in from the same place.  
+**Result:** This test pass  
+
+**Implementations:** As a user I can add products, update the quantity, or delete products in my cart so that easily make changes before I pay  
+**Test:** In the shoppingcart I got all the products that I have added, I can easy update or remove products from the cart and get a nice overview before checkout.  
+**Resul:t** This test pass
+
+### EPIC 4: Checkout
+**Implementations:**  As a shopper I can view a total grand price of my order before completing my purchase so that I can see what the price will be and no mistakes have been done  
+**Test:**  In shoppingcart there is an grand total with added delivery cost if purshase is smaller than $50, easy to see before checkout  
+**Result:**  This test pass  
+
+**Implementations:** As a shopper I can know that my payment and personal information are totally secure. so that I can go through the purchase safe and secure.   
+**Test:**  Using stripe with webhooks, and secure checkout there is safe to go through the payment and purshase.
+**Result:**  This test pass
+
+**Implementations:**  As a shopper I can receive a confirmation email of my purchase so that I know my purchase went through successfully.  
+**Test:** When payment is successful the user get an confirmation mail with the orderinformation and ordernumber. The purshase is saved on users profile page in order history. And you get an instant confirmation when payment is done.  
+**Result:**  This test pass
+
+### EPIC 5: Reviews
+**Implementations:** As a user I can read other users reviews on products so that Im able to get knowledge of others opinions of the product  
+**Test:**  On products where there is reviews, its easy to find them and read from the product detail page.  
+**Result:**  This test pass  
+
+**Implementations:**  As a user I can add an review of the products so that I can share my opinion about it to other potential buyers  
+**Test:** Tested this by click on a product detail page when not logged in and get informed that I have to sign in so that I can then make reviews from the product detail page with no problem.  
+**Result:**  This test pass  
+
+### EPIC 6: Wishlist
+**Implementations:**  As a shopper I can Choose to add a item to a wishlist page so that I can save my favourites product but not yet decide if I want to buy it  
+**Test:**  I tested this as not loged in and redirect to sign in. When a user is logged in you can save products to your personal wishlist that you only can see if you are a logged in user.  
+**Result:**  This test pass.  
+
+**Implementations:**  As a user I can delete a item from my wishlist if I don't want it anymore so that I can control my wishlist page and clean it from unwanted items  
+**Test:**  Tested this by click on my wishlist page and from there I can delete items from my list.    
+**Result:** This test pass.  
+
+**Implementations:**  As a user I can Easy navigate to the item in my saved wishlist so that I can choose to put it in the cart if I wanted to buy it   
+**Test:** Tested this by click on my wishlist page and from there link back to the product detail page for add it to my cart if I want.   
+**Result:**  This test pass.  
+
 ## Validator testing
 ## Bugs
 
