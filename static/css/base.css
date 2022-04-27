@@ -311,34 +311,6 @@ textarea{
     border-radius: 0;
 }
 
-/* -------------------------------- Media Queries */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
-
-}
-
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-    .fixed-top-desktop-only {
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        z-index: 1030;
-    }
-
-    .header-container {
-        padding-top: 200px;
-    }
-
-    .logo-img{
-        margin-left: 0px;
-    }
-}
 
 /*-----------------------------------Footer*/
 .footer-bg{
@@ -412,6 +384,35 @@ textarea{
 .allauth-form-inner-content a {
 	color: #17a2b8; /* text-info */
 }
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+      max-width: 80%;
+    }
+  
+  }
+  
+  /* fixed top navbar only on medium and up */
+  @media (min-width: 992px) {
+      .fixed-top-desktop-only {
+          position: fixed;
+          top: 0;
+          right: 0;
+          left: 0;
+          z-index: 1030;
+      }
+  
+      .header-container {
+          padding-top: 200px;
+      }
+  
+      .logo-img{
+          margin-left: 0px;
+      }
+  }
 
 /* pad the top a bit when navbar is collapsed on mobile */
 @media (max-width: 991px) {
