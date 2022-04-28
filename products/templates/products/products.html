@@ -123,7 +123,7 @@
 {% block postloadjs %}
     {{ block.super }}
 <!-- Javascript for sort section -->
-<script type="text/javascript">
+<script>
     $('#sort-selector').change(function(){
         let sort_selector = $(this);
         let current_url = new URL(window.location);
