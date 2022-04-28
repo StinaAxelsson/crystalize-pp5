@@ -126,58 +126,56 @@ THe colors for this site is white and different shades of purple. It is a soft a
 * Hero Image  
 ![]()
 * Grid with linked images of all categories  
-![]()
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/category-grid.jpg)
 **Products**
 **List of all products**  
-![]()
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/product-list.jpg)
 **Sort all products by:**
   * Price(low to high) and vice verse
   * Rating(low to high) and vice verse
   * Name (A-Z) and vice verse
   * Category (A-Z) and vice verse  
-  ![]()
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/sort.jpg)
 **Product detail page with all detail information of the specific product**
   * product name, price and review count.  
   * Add to cart button  
   * Description of the product  
-  ![]()
-  ![]()
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/descript.jpg)
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/detail.jpg)
 **Add products to shopping cart**
   * Success message and overview of whats in the cart and the total cost.  
-  ![]()
   * Add more quantity in bag or remove products from bag  
-  ![]()
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/bag.jpg)
 **Checkout**
   * Create secure purchases  
-  ![]()
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/secure.jpg)
   * Create a user profile to store userse order information  
-  ![]()
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/register.jpg)
   * Receive confirmation email of the purchase with order number and information  
-  ![]()
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/confimation.jpg)
 **Profile**
   * Register a profile account to store information and save all order history  
-  ![]()
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/order%20history.jpg)
   * Update users informaion on profile  
-  ![]()
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/profile.jpg)
   * Sign in / Register and Sign out  
-  ![]()
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/login.jpg)
   * E-mail verification when register an account  
-  ![]()
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/verify.jpg)
 **Review**
   * Users can read other users reviews of the product and see a avarage rating if its rated  
-  ![]()
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/review.jpg)
   * Logged in user can add reviews on products  
-  ![]()
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/add%20review.jpg)
 **Wishlist**
   * As a logged in user you can save your favourit product items in a own wishlist page  
-  ![]()
   * Delete wishlist items from the list  
-  ![]()
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/wishlist.jpg)
   * See what product is marked as wish in product list  
-  ![]()
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/wishlist%20star.jpg)
 **Contact**
 * Contact site owner form
-![]()
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/contact.jpg)
 
 
 ## Features left to implement
@@ -356,18 +354,79 @@ THe colors for this site is white and different shades of purple. It is a soft a
 **JavaScript**
 ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/js.jpg)
 
+**Python**
+![]()
+![]()
+![]()
 
 ## Bugs
+**Bug:** You can change the html file in product detail and change the maximun number of product to add in cart. It will cause an 500 server error in checkout because it's only allowed to add a maximun of 99 of a product.
+**Fix:** I need to fix this but for now there is left like this because I don't have the time to solve it, but I know it's there.
 
+**Bug:** I had some problem with main nav and mobile-nav includes. There where a duplication of an ID in the search dropdown.
+**Fix:** Solve this by removed the ID from the base and gave it an uniqe ID so there was no duplication that gave problem.
+
+**Bug:** When user had add a review there was an delete option on every review, even if the user had not write it by themself.
+**Fix:** Add a if statement with the request user and it solved it.
+
+**Bug:** When a user had add a product to wishlist, there was shown a filled star at the product page on that product. Adn empty stars at the other product. But if a user added more products to wishlist, there added a star, so if the user had ad three product threr where shown three stars in product page beside the product name.
+**Fix:** I had an else statement that ruined it. When i removed the else statement there was only one filled star that showed on the products that the user had added. And on the rest of the product there is no star at all.  
 # Deployment
+To deploy my project, I had to use the Code Institute Python Essentials Template with all the neccesserely code for this project to work woth Django.
+And worked with it at Gitpod workspaces. 
+* When i wantet to save it I saved it by write the commands ***git add . ***, ***git commit -m "commit message"*** and then push it to github with ***git push***.
+Important to open the same workspace everytime you have to work woth it and to do that and secure it's being saved, you have to pin it in your workspace dashboard at gitpod.
+
+* Then i want to deploy iy it at heroku and using my account, if you doesnt have an account you will register first before deploying and create a project. 
+* Create a Procfile in your project is required that specifies the commands that are executed by the app on startup.
+
+  * Click the New dropdown and select Create New App.
+  * Create a name to your project and it has to be uniqe.
+  * Select the region you are working in, in my case Europe
+  * Heroku Settings You will need to set your Environment Variables and this is importat to ensure your application is deployed properly.
+  * In settings click "Reveal Config Vars" and set the variables that you need. Like the secret keys for stripe and aws in my case and a development key for deploy when i am working with the project.
+  * connect your github repository with your heroku project in settings and connect with github.
+  * Deploy your branch automatic or manually. At first the automatic deployment creats every time you push your code to github. But in the middle of the project heroku change the way and you had to save it via the heroku CLI and i was using the terminal to push it to heroku. with this steps:
+  1. Write heroku login -i in terminal on your workspace.
+  2. add your email and then password to heroku 
+  3. Write heroku apps, to get all of your heroku apps
+  4. Write heroku git:remote -a < appname >
+  5. the gut add . , git commit -m "message", git push origin main.
+  5. and the last step is "git push heroku main"
+
+After this you have create a workspace and deployed your project to github and heroku!
+
+
 # Credits
 
-Descriptions of the products: https://www.gemstone.org/
+* Images in homepage on the categorys - https://unsplash.com/s/photos/crystals
 
-https://thecrystalcouncil.com/
+Descriptions of the products: 
+  * https://www.gemstone.org/
 
-https://www.adlibris.com/
+  * https://thecrystalcouncil.com/
 
-https://sagecrystals.com/
+  * https://www.adlibris.com/
+  * https://sagecrystals.com/
+
+
+* The product images is taken by myself with help of my sister, all products is my sisters own.
+
+* I have been using Code Institute walkthrough project - Boutiqe Ado as a template for this project and all credit for them for some of the code I have been using and help with stripe setup.
+
+* I have also using alot of help from the django docs- https://docs.djangoproject.com/en/4.0/ 
+
+* For the wishlist I got alot of help from google and StackOverflow -
+  * https://stackoverflow.com/questions/56580696/how-to-implement-add-to-wishlist-for-a-product-in-django, 
+
+  * https://github.com/jrief/django-shop-wishlists
+
+* for reviews and other thing I have using youtube for help and inspiration
+  * https://www.youtube.com/watch?v=Xjty8q524Jo
+
 # Acknowledgements
+
+I want to thank Code Institutes tutor support for heloing me with my questions I can't find solutions for by my self. Always end up happy with the help from them.
+And my mentor Richard Wells for being positive and supportiv during all my projects and very helpful, giving me advice and get me in the right direction.
+And this is my last project during my course with Code Institute and want to thank the whole team for an amazin journey!
 
