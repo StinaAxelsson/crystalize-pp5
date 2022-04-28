@@ -10,8 +10,11 @@
         <!-- Search -->
         <li class="list-inline-item">
             <a class="text-black d-block d-lg-none" href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <div class="">
-                    <div><i class="bi bi-search"></i>Search</div>   
+                <div>
+                    <div>
+                        <i class="bi bi-search"></i>
+                        Search
+                    </div>    
                 </div>
             </a>
             <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0" aria-labelledby="mobile-search">
@@ -28,6 +31,31 @@
                         </div>
                     </div>
                 </form>
+            </div>
+        </li>
+        <!-- Profile page -->
+        <li class="list-inline-item dropdown d-lg-none">
+            <a class="text-black nav-link" title="profile" href="{% url 'profile' %}" id="user"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <div>
+                    <div>
+                        <i class="bi bi-person icon-nav"></i>
+                        Profile
+                    </div>
+                </div>
+            </a>
+            <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                {% if request.user.is_authenticated %}
+                {% if request.user.is_superuser %}
+                <a href="{% url 'add_product' %}" class="dropdown-item" title="Product Management">Product
+                    Management</a>
+                {% endif %}
+                <a href="{% url 'profile' %}" class="dropdown-item" title="My Profile">My Profile</a>
+                <a href="{% url 'account_logout' %}" class="dropdown-item" title="Logout">Logout</a>
+                {% else %}
+                <a href="{% url 'account_signup' %}" class="dropdown-item" title="Register">Register</a>
+                <a href="{% url 'account_login' %}" class="dropdown-item" title="Login">Login</a>
+                {% endif %}
             </div>
         </li>
         <!-- Wishlist -->

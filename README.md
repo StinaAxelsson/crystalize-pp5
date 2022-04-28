@@ -71,9 +71,9 @@ I have worked in agile owrkflow, using githubs projects. Where i add and store m
 In the footer of this site there is a link to it's Facebook business page. And also a sign up form to subscribe to newsletter where customers can get information about news and offers in their mail.
 My facebook business page can be find [here](https://www.facebook.com/Crystalized-Shop-114195704606129)  
 Or check the printscreens of it here:  
-[Image 1]()
-[Image 2]()
-[Image 3]()
+[Image 1](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/facebook-1.jpg)
+[Image 2](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/facebook-2.jpg)
+[Image 3](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/facebook-3.jpg)
 
 ### **Search Engine Optimisation**
 In my meta tags I have keywords that will be used when userees search on search engines to find this site more easy. I have also add an robots.txt file and a sitemap.xml that makes google search faster.
