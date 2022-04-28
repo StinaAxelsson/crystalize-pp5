@@ -1,5 +1,5 @@
 <!-- Shopping cart with grand total in right side when on mobile or tablets-->
-
+<ul>
     <li class="list-inline-item">
         <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} cart-icon text-black nav-link d-block d-lg-none"
             href="{% url 'view_cart' %}">
@@ -15,3 +15,4 @@
             </div>
         </a>
     </li>
+</ul>

@@ -3,8 +3,8 @@
 # Project Description
 This project is developed as my 5th and final portfolio project during my course at Code Institute. It is a e-commerce website. Here you can find all you need in the world of crystals and gemstones. You can register an account for save your information and order history, you can save your favourite products to a personal wishlist, read and write reviews on the products you like or dislike. And of course buy your magical stuff secure and safe with stripe pay system! 
 
-Here is a livelink to the project: [Crystalizedshop](https://crystalizedshop.herokuapp.com/)
-
+Here is a livelink to the project: [Crystalizedshop](https://crystalizedshop.herokuapp.com/)  
+If you want to test a purschase, use this cardnumbers  
 **Cardnumber:** 4242 4242 4242 4242   
 **Date:** 24/02
 **CVC:** 424 (or any number) 
@@ -69,6 +69,11 @@ I have worked in agile owrkflow, using githubs projects. Where i add and store m
 
 ### **Business Model**
 In the footer of this site there is a link to it's Facebook business page. And also a sign up form to subscribe to newsletter where customers can get information about news and offers in their mail.
+My facebook business page can be find [here](https://www.facebook.com/Crystalized-Shop-114195704606129)  
+Or check the printscreens of it here:  
+[Image 1]()
+[Image 2]()
+[Image 3]()
 
 ### **Search Engine Optimisation**
 In my meta tags I have keywords that will be used when userees search on search engines to find this site more easy. I have also add an robots.txt file and a sitemap.xml that makes google search faster.
@@ -124,61 +129,61 @@ THe colors for this site is white and different shades of purple. It is a soft a
 
 **Navigation**
 * Navigation bar on top of the site. When used on smaller devices manu is in a dropmenu.  
-![]()
+
 **Home**
 * Hero Image  
-![]()
+
 * Grid with linked images of all categories  
-![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/category-grid.jpg)
-**Products**
-**List of all products**  
-![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/product-list.jpg)
-**Sort all products by:**
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/category-grid.jpg)  
+**Products**  
+**List of all products**   
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/product-list.jpg)  
+**Sort all products by:**  
   * Price(low to high) and vice verse
   * Rating(low to high) and vice verse
   * Name (A-Z) and vice verse
-  * Category (A-Z) and vice verse  
-  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/sort.jpg)
-**Product detail page with all detail information of the specific product**
+  * Category (A-Z) and vice verse   
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/sort.jpg)  
+**Product detail page with all detail information of the specific product**  
   * product name, price and review count.  
   * Add to cart button  
-  * Description of the product  
-  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/descript.jpg)
-  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/detail.jpg)
-**Add products to shopping cart**
+  * Description of the product   
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/descript.jpg)  
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/detail.jpg)  
+**Add products to shopping cart**  
   * Success message and overview of whats in the cart and the total cost.  
-  * Add more quantity in bag or remove products from bag  
-  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/bag.jpg)
-**Checkout**
+  * Add more quantity in bag or remove products from bag   
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/bag.jpg)  
+**Checkout**  
   * Create secure purchases  
-  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/secure.jpg)
-  * Create a user profile to store userse order information  
-  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/register.jpg)
-  * Receive confirmation email of the purchase with order number and information  
-  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/confimation.jpg)
-**Profile**
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/secure.jpg)  
+  * Create a user profile to store userse order information   
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/register.jpg)  
+  * Receive confirmation email of the purchase with order number and information   
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/confimation.jpg)  
+**Profile**  
   * Register a profile account to store information and save all order history  
-  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/order%20history.jpg)
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/order%20history.jpg)  
   * Update users informaion on profile  
-  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/profile.jpg)
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/profile.jpg)  
   * Sign in / Register and Sign out  
-  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/login.jpg)
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/login.jpg)  
   * E-mail verification when register an account  
-  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/verify.jpg)
-**Review**
-  * Users can read other users reviews of the product and see a avarage rating if its rated  
-  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/review.jpg)
-  * Logged in user can add reviews on products  
-  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/add%20review.jpg)
-**Wishlist**
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/verify.jpg)  
+**Review**  
+  * Users can read other users reviews of the product and see a avarage rating if its rated   
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/review.jpg)  
+  * Logged in user can add reviews on products   
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/add%20review.jpg)  
+**Wishlist**  
   * As a logged in user you can save your favourit product items in a own wishlist page  
   * Delete wishlist items from the list  
-  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/wishlist.jpg)
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/wishlist.jpg)  
   * See what product is marked as wish in product list  
-  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/wishlist%20star.jpg)
-**Contact**
-* Contact site owner form
-![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/contact.jpg)
+  ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/wishlist%20star.jpg)  
+**Contact**  
+* Contact site owner form  
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/contact.jpg)  
 
 
 ## Features left to implement
@@ -366,25 +371,25 @@ All python code passed the validator without errors, some of the code have too l
 ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/python2.jpg)
 
 ## Bugs
-**Bug:** You can change the html file in product detail and change the maximun number of product to add in cart. It will cause an 500 server error in checkout because it's only allowed to add a maximun of 99 of a product.
+**Bug:** You can change the html file in product detail and change the maximun number of product to add in cart. It will cause an 500 server error in checkout because it's only allowed to add a maximun of 99 of a product.  
 **Fix:** I need to fix this but for now there is left like this because I don't have the time to solve it, but I know it's there.
 
-**Bug:** I had some problem with main nav and mobile-nav includes. There where a duplication of an ID in the search dropdown.
+**Bug:** I had some problem with main nav and mobile-nav includes. There where a duplication of an ID in the search dropdown.  
 **Fix:** Solve this by removed the ID from the base and gave it an uniqe ID so there was no duplication that gave problem.
 
-**Bug:** When user had add a review there was an delete option on every review, even if the user had not write it by themself.
+**Bug:** When user had add a review there was an delete option on every review, even if the user had not write it by themself.  
 **Fix:** Add a if statement with the request user and it solved it.
 
-**Bug:** When a user had add a product to wishlist, there was shown a filled star at the product page on that product. Adn empty stars at the other product. But if a user added more products to wishlist, there added a star, so if the user had ad three product threr where shown three stars in product page beside the product name.
-**Fix:** I had an else statement that ruined it. When i removed the else statement there was only one filled star that showed on the products that the user had added. And on the rest of the product there is no star at all.  
+**Bug:** When a user had add a product to wishlist, there was shown a filled star at the product page on that product. Adn empty stars at the other product. But if a user added more products to wishlist, there added a star, so if the user had ad three product threr where shown three stars in product page beside the product name.  
+**Fix:** I had an else statement that ruined it. When i removed the else statement there was only one filled star that showed on the products that the user had added. And on the rest of the product there is no star at all.   
 # Deployment
-To deploy my project, I had to use the Code Institute Python Essentials Template with all the neccesserely code for this project to work woth Django.
-And worked with it at Gitpod workspaces. 
-* When i wantet to save it I saved it by write the commands ***git add . ***, ***git commit -m "commit message"*** and then push it to github with ***git push***.
-Important to open the same workspace everytime you have to work woth it and to do that and secure it's being saved, you have to pin it in your workspace dashboard at gitpod.
+To deploy my project, I had to use the Code Institute Python Essentials Template with all the neccesserely code for this project to work woth Django. With that template I create a repository in Github where i start my project.
+And then open it and work with it at Gitpod workspaces.
+It is important to open the same workspace everytime you have to work with it and to do that and secure it's being saved, you have to pin it in your workspace dashboard at gitpod.
+When you want to save your work you need to write the commands in the terminal of your workspace: ***git add .*** , ***git commit -m "commit message"*** and then push it to github with ***git push***. To publish it and store it in your Github repositry.
 
-* Then i want to deploy iy it at heroku and using my account, if you doesnt have an account you will register first before deploying and create a project. 
-* Create a Procfile in your project is required that specifies the commands that are executed by the app on startup.
+* Then i want to deploy it at heroku, I am using my account on Heroku, if you doesnt have an account you will register first before deploying and then create a project in heroku. 
+* Create a Procfile in your project, this required that specifies the commands that are executed by the app on startup.
 
   * Click the New dropdown and select Create New App.
   * Create a name to your project and it has to be uniqe.
