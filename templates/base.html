@@ -75,7 +75,7 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item">
-                        <a class="text-black nav-link d-block " href="#" id="mobile-search" data-toggle="dropdown"
+                        <a class="text-black nav-link d-block " href="#" id="search" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false" title="search">
                             <div class="text-center">
                                 <div><i class="bi bi-search icon-nav"></i></div>
@@ -139,7 +139,6 @@
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link cart-icon"
                             href="{% url 'view_cart' %}" title="shopping cart">
                             <div class="text-center text-black">
-
                                 <i class="bi bi-cart icon-nav"></i>
                                 <span class="checkout-btns small">
                                     {% if grand_total %}
@@ -148,7 +147,6 @@
                                     $0.00
                                     {% endif %}
                                 </span>
-
                             </div>
                         </a>
                     </li>
