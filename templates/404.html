@@ -1,17 +1,19 @@
-{% extends "base.html" %}
+  {% extends "account/base.html" %}
 
-{% load static %}
-
-{% block content %}
-<hr>
-<h1 class="logo-font mb-4 text-center">404</h1>
-<hr>
-<p class="text-center">Oops! Something went wrong, go back to Crystalized shop?</p>
-<div class="row justify-content-center mt-3 m-5">
-
-  <a class="btn btn-outline-black rounded-0" href="{% url 'home' %}">Back to Home</a>
+  {% load i18n %}
   
-</div>
-
-
-{% endblock %}
+  {% block head_title %}{% trans "Error 404" %}{% endblock %}
+  
+  {% block content %}
+      <hr>
+      <h1 class="logo-font text-center mt-2">{% trans "Error 404" %}</h1>
+      <hr>
+      <div class="row justify-content-center mt-3 m-5">
+          <div class="col-md-6 col-sm-12">
+              <p>{% blocktrans %}Oops! Something went wrong...{% endblocktrans %}
+              </p>
+              <a class="btn checkout-btns rounded-0" href="{% url 'home' %}">Back to Home</a>
+          </div>
+      </div>
+  
+  {% endblock %}

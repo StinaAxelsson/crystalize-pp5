@@ -69,7 +69,6 @@
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
                 <a href="{% url 'products' %}?sort=price&direction=asc" class="dropdown-item">By Price</a>
-                <a href="{% url 'products' %}?sort=rating&direction=desc" class="dropdown-item ">By Rating</a>
                 <a href="{% url 'products' %}?sort=category&direction=asc" class="dropdown-item ">By Category</a>
                 <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
             </div>
@@ -97,8 +96,7 @@
                 <a href="{% url 'products' %}?category=tarotcards" class="dropdown-item">Tarot Cards</a>
                 <a href="{% url 'products' %}?category=books" class="dropdown-item">Books</a>
                 <a href="{% url 'products' %}?category=incensesburners" class="dropdown-item">Incenses Burners</a>
-                <a href="{% url 'products' %}?category=whitesages" class="dropdown-item">White Sage</a>
-                <a href="{% url 'products' %}?category=tarotcards,books,incensesburners,whitesages" class="dropdown-item">All Cards, Books and Incenses</a>
+                <a href="{% url 'products' %}?category=tarotcards,books,incensesburners" class="dropdown-item">All Cards, Books and Incenses</a>
             </div>
         </li>
         <li class="nav-item dropdown">

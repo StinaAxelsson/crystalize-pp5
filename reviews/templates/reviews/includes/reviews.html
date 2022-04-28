@@ -21,7 +21,7 @@
             <article>
                 <i class="bi bi-person fa-lg"></i> {{ review.user }}  
                 <i class="bi bi-calendar2"></i>  {{ review.date_posted }}
-                {% if request.user.is_authenticated %}
+                {% if request.user.is_authenticated == review.user.id%}
                         <a class="badge badge-pill border-black" href="{% url 'delete_review' review.id %}">Delete</a>
                 {% endif %}
                 <div>

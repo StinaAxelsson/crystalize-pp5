@@ -5,6 +5,8 @@
   <head>
     {% block meta %}
     <!-- Required meta tags -->
+    <meta name="Description" content="crystals-shop, online shop, let the magic begin, shipping worldwide"/>
+    <meta name="keywords" content="crystals, gemstones, shop, instances, clusters, towers, rawstones, wellness, health, spirit">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -61,7 +63,7 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item">
-                        <a class="text-black nav-link d-block " href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="text-black nav-link d-block " href="#" id="mobile-search" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="search">
                             <div class="text-center">
                                 <div><i class="bi bi-search icon-nav"></i></div>
                             </div>
@@ -83,7 +85,7 @@
                     </li>
                     {% if request.user.is_authenticated %}
                         <li class="list-inline-item">
-                            <a class="nav-link d-block " href="{% url 'wishlist' %}">
+                            <a class="nav-link d-block" href="{% url 'wishlist' %}" title="Wishlist">
                                 <div class="text-center">
                                     <div>
                                         <i class="bi bi-star icon-nav"></i>
@@ -94,7 +96,7 @@
                         </li>
                     {% endif %}
                     <li class="list-inline-item dropdown">
-                        <a class="text-black nav-link" href="{% url 'profile' %}" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="text-black nav-link" title="profile" href="{% url 'profile' %}" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="bi bi-person icon-nav"></i></div>
                                 
@@ -103,19 +105,19 @@
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                                    <a href="{% url 'add_product' %}" class="dropdown-item" title="Product Management">Product Management</a>
                                 {% endif %}
-                                <a href="{% url 'profile' %}" class="dropdown-item">My Profile</a>
-                                <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+                                <a href="{% url 'profile' %}" class="dropdown-item" title="My Profile">My Profile</a>
+                                <a href="{% url 'account_logout' %}" class="dropdown-item" title="Logout">Logout</a>
                             {% else %}
-                                <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-                                <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                <a href="{% url 'account_signup' %}" class="dropdown-item" title="Register">Register</a>
+                                <a href="{% url 'account_login' %}" class="dropdown-item" title="Login">Login</a>
                             {% endif %}
                         </div>
                     </li>
 
                     <li class="list-inline-item">
-                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}" title="shopping cart">
                             <div class="text-center">
                                 <button type="button" class="mr-4 position-relative cart-icon">
                                     <i class="bi bi-cart icon-nav"></i>
