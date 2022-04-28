@@ -1,4 +1,4 @@
-![Responsive image here]()
+![Responsive image here](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/project-image.jpg)
 
 # Project Description
 This project is developed as my 5th and final portfolio project during my course at Code Institute. It is a e-commerce website. Here you can find all you need in the world of crystals and gemstones. You can register an account for save your information and order history, you can save your favourite products to a personal wishlist, read and write reviews on the products you like or dislike. And of course buy your magical stuff secure and safe with stripe pay system! 
@@ -13,15 +13,19 @@ Here is a livelink to the project: [Crystalizedshop](https://crystalizedshop.her
 # Content
 * [Project Description](https://github.com/StinaAxelsson/crystalize-pp5#project-description)
 * [UX](https://github.com/StinaAxelsson/crystalize-pp5#ux)
-  * [User Stories](https://github.com/StinaAxelsson/crystalize-pp5#user-stories)
-  * [Site Owner Goals](https://github.com/StinaAxelsson/crystalize-pp5#site-owner-goals)
-  * [Structure](https://github.com/StinaAxelsson/crystalize-pp5#structure)
+  * [Agile Workflow](https://github.com/StinaAxelsson/crystalize-pp5#agile-workflow)
+  * [Marketing](https://github.com/StinaAxelsson/crystalize-pp5#marketing)
+  * [Business Model](https://github.com/StinaAxelsson/crystalize-pp5#business-model)
+  * [Search Engine Optimisation](https://github.com/StinaAxelsson/crystalize-pp5#search-engine-optimisation)
+  * [Strategy](https://github.com/StinaAxelsson/crystalize-pp5#strategy)
+  * [Site owner Goals](https://github.com/StinaAxelsson/crystalize-pp5#site-owner-goals)
+  * [Scope](https://github.com/StinaAxelsson/crystalize-pp5#scope)
+    * [User Stories](https://github.com/StinaAxelsson/crystalize-pp5#user-stories)
   * [Design Choises](https://github.com/StinaAxelsson/crystalize-pp5#design-choises)
   * [Wireframes](https://github.com/StinaAxelsson/crystalize-pp5#wireframes)
-* [Features](https://github.com/StinaAxelsson/crystalize-pp5#features)
-  * [Data Storage](https://github.com/StinaAxelsson/crystalize-pp5#data-storage)
   * [Existing Features](https://github.com/StinaAxelsson/crystalize-pp5#existing-features)
   * [Features Left to Implement](https://github.com/StinaAxelsson/crystalize-pp5#features-left-to-implement)
+  * [Data Storage](https://github.com/StinaAxelsson/crystalize-pp5#data-storage)
   
 * [Technologies Used](https://github.com/StinaAxelsson/crystalize-pp5#technologies-used)
   * [Languages](https://github.com/StinaAxelsson/crystalize-pp5#languages)
@@ -39,6 +43,7 @@ Here is a livelink to the project: [Crystalizedshop](https://crystalizedshop.her
 
 # UX
 ## Agile Workflow
+I have worked in agile owrkflow, using githubs projects. Where i add and store my user storys and make milestones as EPICS with all the different user storys in categories for great structure during development. This userstorys can be find in my repository in project. Where i have worked with them in "To Do", "In progress", and "Done".
 
 ## Marketing
 ***Who are your users?***
@@ -109,13 +114,11 @@ I have used the font 'Julius Sans One' for all the Rubrics on the site, it is a 
 ### Colors
 THe colors for this site is white and different shades of purple. It is a soft and calm colour that match the theme and the product of the site. Indicate a calm feeling for the user. 
 ### Colour Schema
-![color scheme]()
+![color scheme](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/COLOURS.jpg)
 ## Wireframes
   * [Browser](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/wireframes/wireframe-browser.pdf)
   * [Tablet](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/wireframes/wireframe-tablet.pdf)
   * [Mobile](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/wireframes/wireframe-mobile.pdf)
-## Database schema
-* [Models]()
 
 ## Existing features
 
@@ -335,6 +338,7 @@ THe colors for this site is white and different shades of purple. It is a soft a
 
 ## Validator testing
 **HTML**
+All html pages and files passed the W3C validator without any errors and warnings!
 ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/cart.jpg)
 ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/categorys.jpg)
 ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/checkout-success.jpg)
@@ -349,15 +353,17 @@ THe colors for this site is white and different shades of purple. It is a soft a
 ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/wishlist.jpg)
 
 **CSS**
+All CSS code passed the W3C validator without errors.
 ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/css.jpg)
 
 **JavaScript**
+All javascript code passed the JShint validator without errors. 
 ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/js.jpg)
 
 **Python**
-![]()
-![]()
-![]()
+All python code passed the validator without errors, some of the code have too long lines, but i don't know where to break them without ruin the code.
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/python-1.jpg)
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/python2.jpg)
 
 ## Bugs
 **Bug:** You can change the html file in product detail and change the maximun number of product to add in cart. It will cause an 500 server error in checkout because it's only allowed to add a maximun of 99 of a product.
