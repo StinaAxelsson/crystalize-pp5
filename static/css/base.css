@@ -440,9 +440,7 @@ textarea{
 @media (max-width: 722px) {
    
     .logo-img{
-        height: 3rem;
-        width: auto;
-        margin-left: 0;
+        display: none;
     }
 
     .header-container {

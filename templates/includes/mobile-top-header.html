@@ -1,18 +1,17 @@
 <!-- Shopping cart with grand total in right side when on mobile or tablets-->
-<ul>
+
     <li class="list-inline-item">
-        <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} nav-link d-block d-lg-none"
+        <a class="{% if grand_total %}text-primary font-weight-bold{% else %}text-black{% endif %} cart-icon text-black nav-link d-block d-lg-none"
             href="{% url 'view_cart' %}">
-            <div class="text-center text-black">
-                <i class="bi bi-cart icon-nav"></i>
-                <span class="checkout-btns small">
+            <div class="text-center">
+                <div><i class="bi bi-cart icon-nav"></i></div>
+                <p class="my-0 text-black small">
                     {% if grand_total %}
-                    ${{ grand_total|floatformat:2 }}
+                        ${{ grand_total|floatformat:2 }}
                     {% else %}
-                    $0.00
+                        $0.00
                     {% endif %}
-                </span>
+                </p>
             </div>
         </a>
     </li>
-</ul>

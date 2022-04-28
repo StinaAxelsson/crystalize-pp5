@@ -111,49 +111,73 @@ THe colors for this site is white and different shades of purple. It is a soft a
 ### Colour Schema
 ![color scheme]()
 ## Wireframes
-  * [Browser](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/media/images/wireframe-browser.pdf)
-  * [Tablet](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/media/images/wireframe-tablet.pdf)
-  * [Mobile](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/media/images/wireframe-mobile.pdf)
+  * [Browser](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/wireframes/wireframe-browser.pdf)
+  * [Tablet](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/wireframes/wireframe-tablet.pdf)
+  * [Mobile](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/wireframes/wireframe-mobile.pdf)
 ## Database schema
 * [Models]()
 
 ## Existing features
 
 **Navigation**
-* Navigation bar on top of the site. When used on smaller devices manu is in a dropmenu.
+* Navigation bar on top of the site. When used on smaller devices manu is in a dropmenu.  
+![]()
 **Home**
-* Hero Image
-* Grid with linked images of all categories
+* Hero Image  
+![]()
+* Grid with linked images of all categories  
+![]()
 **Products**
-**List of all products**
+**List of all products**  
+![]()
 **Sort all products by:**
   * Price(low to high) and vice verse
   * Rating(low to high) and vice verse
   * Name (A-Z) and vice verse
-  * Category (A-Z) and vice verse
+  * Category (A-Z) and vice verse  
+  ![]()
 **Product detail page with all detail information of the specific product**
-  * product name, price and review count.
-  * Add to cart button
-  * Description of the product
+  * product name, price and review count.  
+  * Add to cart button  
+  * Description of the product  
+  ![]()
+  ![]()
 **Add products to shopping cart**
-  * Success message and overview of whats in the cart and the total cost.
-  * Add more quantity in bag or remove products from bag
+  * Success message and overview of whats in the cart and the total cost.  
+  ![]()
+  * Add more quantity in bag or remove products from bag  
+  ![]()
 **Checkout**
-  * Create secure purchases
-  * Create a user profile to store userse order information 
-  * Receive confirmation email of the purchase with order number and information
+  * Create secure purchases  
+  ![]()
+  * Create a user profile to store userse order information  
+  ![]()
+  * Receive confirmation email of the purchase with order number and information  
+  ![]()
 **Profile**
-  * Register a profile account to store information and save all order history
-  * Update users informaion on profile 
-  * Sign in / Register and Sign out
-  * E-mail verification when register an account
+  * Register a profile account to store information and save all order history  
+  ![]()
+  * Update users informaion on profile  
+  ![]()
+  * Sign in / Register and Sign out  
+  ![]()
+  * E-mail verification when register an account  
+  ![]()
 **Review**
-  * Users can read other users reviews of the product and see a avarage rating if its rated
-  * Logged in user can add reviews on products
+  * Users can read other users reviews of the product and see a avarage rating if its rated  
+  ![]()
+  * Logged in user can add reviews on products  
+  ![]()
 **Wishlist**
-  * As a logged in user you can save your favourit product items in a own wishlist page
-  * Delete wishlist items from the list
-  * See what product is marked as wish in product list
+  * As a logged in user you can save your favourit product items in a own wishlist page  
+  ![]()
+  * Delete wishlist items from the list  
+  ![]()
+  * See what product is marked as wish in product list  
+  ![]()
+**Contact**
+* Contact site owner form
+![]()
 
 
 ## Features left to implement
@@ -313,15 +337,24 @@ THe colors for this site is white and different shades of purple. It is a soft a
 
 ## Validator testing
 **HTML**
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
-![]()
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/cart.jpg)
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/categorys.jpg)
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/checkout-success.jpg)
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/checkout.jpg)
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/home.jpg)
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/login.jpg)
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/logout.jpg)
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/product.jpg)
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/products.jpg)
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/profile.jpg)
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/register.jpg)
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/wishlist.jpg)
+
+**CSS**
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/css.jpg)
+
+**JavaScript**
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/validation/js.jpg)
 
 
 ## Bugs

@@ -79,6 +79,7 @@
                             aria-haspopup="true" aria-expanded="false" title="search">
                             <div class="text-center">
                                 <div><i class="bi bi-search icon-nav"></i></div>
+                                <p class="my-0">Search</p>
                             </div>
                         </a>
                         <div class="dropdown-menu border-0 w-100 p-3 rounded-0 my-0">
@@ -107,6 +108,7 @@
                                 <div>
                                     <i class="bi bi-star icon-nav"></i>
                                 </div>
+                                <p class="my-0 text-black">Wishlist</p>
 
                             </div>
                         </a>
@@ -118,6 +120,7 @@
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="bi bi-person icon-nav"></i></div>
+                                <p class="my-0">Profile</p>
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
@@ -135,18 +138,18 @@
                         </div>
                     </li>
                     <!-- Shopping cart with grand total-->
-                    <li class="list-inline-item">
+                    <li class="list-inline-item"> 
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link cart-icon"
                             href="{% url 'view_cart' %}" title="shopping cart">
-                            <div class="text-center text-black">
-                                <i class="bi bi-cart icon-nav"></i>
-                                <span class="checkout-btns small">
+                            <div class="text-center">
+                                <div><i class="bi bi-cart icon-nav"></i></div>
+                                <p class="my-0 text-black small">
                                     {% if grand_total %}
-                                    ${{ grand_total|floatformat:2 }}
+                                        ${{ grand_total|floatformat:2 }}
                                     {% else %}
-                                    $0.00
+                                        $0.00
                                     {% endif %}
-                                </span>
+                                </p>
                             </div>
                         </a>
                     </li>
@@ -312,7 +315,7 @@
     </footer>
 
     {% block postloadjs %}
-    <!-- Javascript for show the toast when user get feedback from an action and mailchimp -->
+    <!-- Javascript for show the toast when user get feedback from an action-->
     <script>
         $('.toast').toast('show');
       
