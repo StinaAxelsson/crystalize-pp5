@@ -41,12 +41,13 @@
 
     {% block extra_js %}
     {% endblock %}
-
+<!-- title of the site -->
     <title>Crystalized {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
     <header class="container-fluid fixed-top">
         <div id="delivery-banner" class="row text-center">
+            <!--Banner with delivery informaion on top of the site -->
             <div class="col bg-banner text-white">
                 <h4 class="banner-text my-1">Free delivery on orders over ${{ free_delivery_threshold }}!</h4>                
             </div>            
@@ -55,11 +56,13 @@
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-lg-left">
                 
             </div>
+            <!-- Logo image -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
                     <img class="img-fluid logo-img" src="{{ MEDIA_URL }}logoimage.jpg" alt="Crystalized shop">
                 </a>
             </div>
+            <!--Search -->
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item">
@@ -83,6 +86,7 @@
                             </form>
                         </div>
                     </li>
+                    <!-- If user logged in they see wishlist from navbar -->
                     {% if request.user.is_authenticated %}
                         <li class="list-inline-item">
                             <a class="nav-link d-block" href="{% url 'wishlist' %}" title="Wishlist">
@@ -95,17 +99,17 @@
                             </a>
                         </li>
                     {% endif %}
+                    <!-- Profile page -->
                     <li class="list-inline-item dropdown">
                         <a class="text-black nav-link" title="profile" href="{% url 'profile' %}" id="user-options" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <div class="text-center">
                                 <div><i class="bi bi-person icon-nav"></i></div>
-                                
                             </div>
                         </a>
                         <div class="dropdown-menu border-0" aria-labelledby="user-options">
                             {% if request.user.is_authenticated %}
                                 {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_product' %}" class="dropdown-item" title="Product Management">Product Management</a>
+                                <a href="{% url 'add_product' %}" class="dropdown-item" title="Product Management">Product Management</a>
                                 {% endif %}
                                 <a href="{% url 'profile' %}" class="dropdown-item" title="My Profile">My Profile</a>
                                 <a href="{% url 'account_logout' %}" class="dropdown-item" title="Logout">Logout</a>
@@ -115,7 +119,7 @@
                             {% endif %}
                         </div>
                     </li>
-
+                    <!-- Shopping cart with grand total-->
                     <li class="list-inline-item">
                         <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_cart' %}" title="shopping cart">
                             <div class="text-center">
@@ -127,16 +131,15 @@
                                         {% else %}
                                         $0.00
                                         {% endif %}
-                                      
                                     </span>
                                   </button>
-                            
                             </div>
                         </a>
                     </li>
                 </ul>
             </div>
         </div>
+        <!-- When on smaller screens the menu is in a menu icon-->
         <div class="row header-bg">
             <nav class="navbar navbar-main-lg navbar-expand-lg navbar-light w-100 navbar-shadow pt-3 pt-lg-2">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -145,12 +148,13 @@
                 <a href="{% url 'home' %}" class="nav-link main-logo-link d-block d-lg-none">
                     <img class="img-fluid logo-img" src="{{ MEDIA_URL }}logoimage.jpg" alt="Crystalized shop">
                 </a>
+                <!-- Main-nav and mobile header pages -->
                 {% include 'includes/mobile-top-header.html' %}
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>
     </header>
-
+<!-- All messages and toast shows in a container when user do an action and receive a feedback -->
     {% if messages %}
         <div class="message-container">
             {% for message in messages %}
@@ -175,7 +179,9 @@
     {% block content %}
     {% endblock %}
 
+<!--Footer Section -->
     <footer class="container-fluid pt-2">
+        <!-- Include pages for main footer and on smaller devices -->
         {% include 'includes/mobile-footer.html' %}
         {% include 'includes/main-footer.html' %}
         <div class="row pb-2 pb-lg-3 mt-0 pt-1 pt-lg-2 text-center text-lg-left footer-bg">
@@ -197,7 +203,7 @@
                             <i class="fab fa-facebook-square fa-lg  ml-1 social-icon-small" aria-hidden="true"></i>
                             <span class="sr-only">Facebook</span>
                         </a>
-                        <a href="https://www.linkedin.com/feed/" class="text-decoration-none" target="_blank" rel="noopener">
+                        <a href="https://www.linkedin.com/" class="text-decoration-none" target="_blank" rel="noopener">
                             <i class="fab fa-linkedin fa-lg ml-1 social-icon-small" aria-hidden="true"></i>
                             <span class="sr-only">linkedin</span>
                         </a>
@@ -208,11 +214,10 @@
     </footer>
 
     {% block postloadjs %}
+    <!-- Javascript for show the toast when user get feedback from an action -->
     <script type="text/javascript">
         $('.toast').toast('show');
     </script>
     {% endblock %}
-
-    
   </body>
 </html>

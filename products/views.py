@@ -75,12 +75,11 @@ def product_detail(request, product_id):
 
     product = get_object_or_404(Product, pk=product_id)
     reviews = Review.objects.filter(product=product)
-    
+
     reviews_by_user = None
 
     avg_rating = reviews.aggregate(Avg('rating'))['rating__avg']
     if avg_rating is not None:
-        # round to the nearest 0.5 value
         avg_rating = round(avg_rating * 2) / 2
 
     if not request.user.is_authenticated:

@@ -57,6 +57,7 @@
                     </div>
                 </div>
             {% endfor %}
+            <!-- Delivery costs, grand total information before purshase -->
             <hr class="my-0">
             <div class="row text-black text-right">
                 <div class="col-7 offset-2">
@@ -80,6 +81,7 @@
                     {{ order_form.full_name | as_crispy_field }}
                     {{ order_form.email | as_crispy_field }}
                 </fieldset>
+                <!-- Form to fill in delivery information and user can save it to their profile page-->
                 <fieldset class="rounded px-3 mb-5">
                     <legend class="fieldset-label small text-black px-2 w-auto">Delivery</legend>
                     {{ order_form.phone_number | as_crispy_field }}

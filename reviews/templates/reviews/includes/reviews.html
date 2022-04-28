@@ -1,15 +1,17 @@
 {% block content %}
 {% load static %}
 
-
+<!-- Reviews shows here -->
 
 <div class="container-fluid">
     <div class="row pt-4 pb-2" id="product-reviews">
         <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+            <!-- If there is reviews, shows how many for this product -->
             <hr>
             {% if reviews.count %}
             <h4>Product Reviews for {{ product.name }} ({{ reviews.count }})</h4>
             {% else %}
+            <!-- If no reviews, shows an text to make user be first to add one -->
             <h4>Product Reviews (0)</h4>
             <p> Be the first to add an review for this product! </p>
             {% endif %}
@@ -17,10 +19,12 @@
     </div>
     <div class="row pt-2">
         <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
+            <!-- All reviews with Name of user, date when created, and rating and review  -->
             {% for review in reviews %}
             <article>
                 <i class="bi bi-person fa-lg"></i> {{ review.user }}  
                 <i class="bi bi-calendar2"></i>  {{ review.date_posted }}
+                <!-- If user is logged in, you can delete your own review. -->
                 {% if request.user.is_authenticated == review.user.id%}
                         <a class="badge badge-pill border-black" href="{% url 'delete_review' review.id %}">Delete</a>
                 {% endif %}
@@ -92,12 +96,14 @@
             <hr>
         </div>
     </div>
+    <!-- If user already reviewd on this product, they can't add more-->
     {% if reviews_by_user %}
             <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
                 <h6>You have already posted a review</h6>
             </div>
             <br>
     {% else %}
+    <!-- User has to be logged in to add a review or login -->
         <div class="row pb-4">
             <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
                 {% if request.user.is_authenticated %}
@@ -111,7 +117,7 @@
                 {% endif %}
             </div>
         </div>
-
+        <!-- Review form -->
         <div class="row pb-4">
             <div class="col-sm-10 offset-sm-1 col-md-8 offset-md-2">
                 {% if request.user.is_authenticated %}

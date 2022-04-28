@@ -11,7 +11,7 @@
 {% endblock %}
 
 {% block content %}
-
+<!--Shopping cart-->
 <div class="container mb-2">
     <div class="row">
         <div class="col text-center mt-5">
@@ -19,7 +19,7 @@
             <hr>
         </div>
     </div>
-
+    <!--Shows all products in a table with Product info, price, quantity and subtotal -->
     <div class="row">
         <div class="col text-center mt-3">
             {% if cart_items %}
@@ -48,6 +48,7 @@
                                     <p class="my-0">${{ item.product.price }}</p>
                                 </td>
                                 <td class="py-3 w-25">
+                                    <!-- Decrease or Increase quantity products direct from cart to update sub and grand total price -->
                                     <form class="form update-form" method="POST" action="{% url 'change_cart' item.item_id %}">
                                         {% csrf_token %}
                                         <div class="form-group">
@@ -83,6 +84,7 @@
                                 </td>
                             </tr>
                         {% endfor %}
+                        <!-- Total cost with product price and delivery cost. Show information about delivery -->
                         <tr>
                             <td colspan="5" class="pt-5 text-right">
                                 <h6><strong>Bag Total: ${{ total|floatformat:2 }}</strong></h6>
@@ -96,6 +98,7 @@
                             </td>
                         </tr>
                         <tr>
+                            <!-- Navigation to go back to shopping or go forward with the purshase-->
                             <td colspan="5" class="text-right">
                                 <a href="{% url 'products' %}" class="btn btn-outline-black rounded-0 btn-lg">
                                     <span class="icon">
@@ -114,7 +117,8 @@
                     </table>
                 </div>
             {% else %}
-                <p class="lead mb-5">Your bag is empty.</p>
+            <!-- If cart is empty nothing will be shown -->
+                <p class="lead mb-5">Your cart is empty.</p>
                 <a href="{% url 'products' %}" class="btn checkout-btns rounded-0 btn-lg">
                     <span class="icon">
                         <i class="fas fa-chevron-left"></i>

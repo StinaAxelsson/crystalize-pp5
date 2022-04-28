@@ -8,7 +8,7 @@
         </div>
     </div>
 {% endblock %}
-
+<!-- Product page with a list of current availble products -->
 {% block content %}
     <div class="container-fluid">
         <div class="row">
@@ -23,6 +23,7 @@
             </div>
         </div>
         <div class="row">
+            <!-- Sort system to user easy to find what they searching -->
             <div class="product-container col-10 offset-1">
                 <div class="row mt-1 mb-2">
                     <div class="col-12 col-md-6 my-auto order-md-first d-flex justify-content-center justify-content-md-start">
@@ -50,6 +51,7 @@
                     </div>
                 </div>
                 <div class="row">
+                    <!-- List all products -->
                     {% for product in products %}
                         <div class="col-6 col-sm-6 col-md-6 col-lg-4 col-xl-3 products-body">
                             <div class="card h-100 border-0">
@@ -65,6 +67,7 @@
                                 <div class="card-body pb-0 products-body">
                                     <a href="{% url 'product_detail' product.id %}" class="text-decoration-none">
                                     <p class="mb-0 text-black ">{{ product.name }}
+                                        <!-- If user is logged in and have add a product to their wishlist, it show a start beside the product name -->
                                         {% for item in wishlist %}
                                             {% if product.id == item.product.id %}
                                                 <span class="ml-2"><i class="bi bi-star-fill delete-wish"></i></span>
@@ -73,7 +76,7 @@
                                     </p>
                                     </a>
                                 </div>
-                                
+                                <!-- Product Price info, and if superuser, 2 buttons to edit or delete the product-->
                                 <div class="card-footer products-body pt-0 border-0 text-left">
                                     <div class="row">
                                         <div class="col">
@@ -89,6 +92,7 @@
                                 </div>
                             </div>
                         </div>
+                        <!-- Counter to make it flow easy in all screen sizes  using divisibleby -->
                         {% if forloop.counter|divisibleby:2 %}
                             <div class="col-12  d-lg-none mb-5">
                                 <hr>
@@ -118,7 +122,7 @@
 
 {% block postloadjs %}
     {{ block.super }}
-        
+<!-- Javascript for sort section -->
 <script type="text/javascript">
     $('#sort-selector').change(function(){
         let sort_selector = $(this);

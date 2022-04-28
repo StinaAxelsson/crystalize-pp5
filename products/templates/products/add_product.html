@@ -8,7 +8,7 @@
         </div>
     </div>
 {% endblock %}
-
+<!-- If user is manager/super user this page user can add products to the product list -->
 {% block content %}
     <div class="container">
         <div class="row">
@@ -19,7 +19,7 @@
                 <hr>
             </div>
         </div>
-
+        <!-- Add product form -->
         <div class="row">
             <div class="col-12 col-md-6">
                 <form method="POST" action="{% url 'add_product' %}" class="form mb-2" enctype="multipart/form-data">

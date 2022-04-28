@@ -23,7 +23,7 @@
                 <p class="text-black">Your order information is below. A confirmation email will be sent to <strong>{{ order.email }}</strong>.</p>
             </div>
         </div>
-
+        <!-- Order informaion -->
         <div class="row">
             <div class="col-12 col-lg-7">
                 <div class="order-confirmation-wrapper p-2 border">
@@ -56,7 +56,7 @@
                             <small class="text-muted">Order Details:</small>
                         </div>
                     </div>
-
+                    <!-- Details of the order products and profile informaion -->
                     {% for item in order.lineitems.all %}
                     <div class="row">
                         <div class="col-12 col-md-4">
@@ -190,6 +190,7 @@
             </div>
         </div>
         <div class="row">
+            <!-- If a user is logged in, they can go back to their profile page -->
 			<div class="col-12 col-lg-7 text-right">
                 {% if from_profile %}
 				<a href="{% url 'profile' %}" class="btn btn-black rounded-0 my-2">
@@ -198,7 +199,7 @@
 					</span>
 					<span class="text-uppercase">Back to Profile</span>
 				</a>
-
+                <!-- If user not logged in they will get back to products -->
                 {% else %}
 				<a href="{% url 'products' %}" class="btn btn-black rounded-0 my-2">
 					<span class="icon mr-2">

@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /accounts/
+Disallow: /user_account/
+Disallow: /checkout/
+Disallow: /checkout/order_confirmation/
+Sitemap: https://crystalizedshop.herokuapp.com/sitemap.xml

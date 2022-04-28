@@ -8,7 +8,7 @@
         </div>
     </div>
 {% endblock %}
-
+<!-- If user is manager/superuser, user can edit existing products  -->
 {% block content %}
     <div class="container">
         <div class="row">
@@ -19,7 +19,7 @@
                 <hr>
             </div>
         </div>
-
+        <!-- Edit product form -->
         <div class="row">
             <div class="col-12 col-md-6">
                 <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
