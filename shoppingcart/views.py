@@ -63,3 +63,4 @@ def delete_in_cart(request, item_id):
     except Exception as e:
         messages.error(request, f'Error! Remove item {e} from cart ')
         return HttpResponse(status=500)
+

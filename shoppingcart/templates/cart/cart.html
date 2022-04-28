@@ -148,9 +148,8 @@
     $('.remove-item').click(function(e) {
         let csrfToken = "{{ csrf_token }}";
         let itemId = $(this).attr('id').split('remove_')[1];
-        let size = $(this).data('size');
         let url = `/cart/delete/${itemId}/`;
-        let data = {'csrfmiddlewaretoken': csrfToken, 'product_size': size};
+        let data = {'csrfmiddlewaretoken': csrfToken};
 
         $.post(url, data)
          .done(function() {
