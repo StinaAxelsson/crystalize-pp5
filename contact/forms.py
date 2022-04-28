@@ -1,8 +1,9 @@
 from django import forms
 
+
 class ContactForm(forms.Form):
     """
-    Create a contact form to users be able to 
+    Create a contact form to users be able to
     contact the site owner
     """
     name = forms.CharField(required=True, label='Name')
@@ -12,7 +13,7 @@ class ContactForm(forms.Form):
 
     def __init__(self, *args, **kwargs):
         """
-        Add placeholders for the fields and set focus on the 
+        Add placeholders for the fields and set focus on the
         first field.
         """
         super().__init__(*args, **kwargs)

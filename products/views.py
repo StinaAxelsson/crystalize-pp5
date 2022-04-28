@@ -50,7 +50,7 @@ def all_products(request):
 
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
-    
+
     current_sorting = f'{sort}_{direction}'
 
     wishlist = None
@@ -109,7 +109,7 @@ def product_detail(request, product_id):
             'wishlist': wishlist
         }
 
-        return render(request, 'products/product_detail.html', context) 
+        return render(request, 'products/product_detail.html', context)
 
 
 @login_required
@@ -129,7 +129,7 @@ def add_product(request):
             messages.error(request, 'Failed to add product. Please ensure the form is valid.')
     else:
         form = ProductForm()
-    
+
     template = 'products/add_product.html'
     context = {
         'form': form,

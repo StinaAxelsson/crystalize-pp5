@@ -24,7 +24,7 @@ def add_to_cart(request, item_id):
         messages.success(request, f'Successfully added {product.name} to your shoppingcart!')
 
     request.session['cart'] = cart
-    
+
     return redirect(redirect_url)
 
 
@@ -43,7 +43,7 @@ def change_cart(request, item_id):
         messages.success(request, f'Deleted {product.name} from your cart')
 
     request.session['cart'] = cart
-    
+
     return redirect(reverse('view_cart'))
 
 
