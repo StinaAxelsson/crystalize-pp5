@@ -183,7 +183,6 @@
                                         <a class="save-wish" href="{% if user.is_authenticated %}{% url 'save_to_wishlist' product.id %}{% else %}{% url 'account_login' %}{% endif %}">
                                             <span class=" d-lg-inline-block">Save to Wishlist: </span>
                                             <i class="bi bi-star save-wish"></i>
-                                            <span class="d-lg-inline-block ml-4"><small>(Login Requires)</small></span>
                                         </a>
                                     {% endif %}
                                     </h5>
