@@ -129,8 +129,8 @@ THe colors for this site is white and different shades of purple. It is a soft a
 
 **Navigation**
 * Navigation bar on top of the site. When used on smaller devices manu is in a dropmenu.  
-
-**Home**
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/navbar.jpg)  
+**Home**  
 * Hero Image  
 
 * Grid with linked images of all categories  
@@ -183,7 +183,10 @@ THe colors for this site is white and different shades of purple. It is a soft a
   ![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/wishlist%20star.jpg)  
 **Contact**  
 * Contact site owner form  
-![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/contact.jpg)  
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/contact.jpg)   
+**Footer**  
+* Footer with options for user to keep in touch and follow newsletter and social media   
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/structure/footer.jpg)
 
 
 ## Features left to implement
@@ -232,9 +235,9 @@ THe colors for this site is white and different shades of purple. It is a soft a
 | Description 	| description     	| None           	| TextField    	|
 | Price       	| price           	| max_digits=6   	| DecimalField 	|
 | Image       	| image           	| None           	| ImageField   	|
-| Rating      	| rating          	| max_digits=6   	| DecimalField 	|
+| Rating      	| rating          	| max_digits=6   	| DecimalField 	|   
 
-
+![](https://github.com/StinaAxelsson/crystalize-pp5/blob/main/docs/databaseschema.jpg)
 # Technologies used
 ## Languages
   * HTML5
@@ -251,7 +254,7 @@ THe colors for this site is white and different shades of purple. It is a soft a
   * [AWS storage](https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fus-east-1.console.aws.amazon.com%2Fconsole%2Fhome%3FhashArgs%3D%2523%26isauthcode%3Dtrue%26region%3Dus-east-1%26state%3DhashArgsFromTB_us-east-1_ec6c9816bc1f1db8&client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fcanvas&forceMobileApp=0&code_challenge=_CzBw4CuEt0wt-zRC7Wyklp-2JyL4PdyWXSzzoKK3YM&code_challenge_method=SHA-256)- Store all the static files
   * [Heroku]()- Deploy my site
   * Git
-  * Postgres
+  * Postgres 
 ## Other programmes
   * [Stripe](https://stripe.com/en-se?utm_campaign=374259791-SE_en_Search_Brand_Stripe&utm_medium=cpc&utm_source=bing&utm_content=78821341507535&utm_term=kwd-78821559915822:loc-174&utm_adposition=&utm_device=c&msclkid=42312d9170651d18d7264ffbc7a5ed02)- Make secure payments
   * [Gitpod](https://gitpod.io/workspaces)- Development workspace
